@@ -1,0 +1,27 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @miembro.nombre
+%p
+  %b Tipo:
+  = @miembro.tipo
+%p
+  %b Fotografia:
+  = @miembro.fotografia
+%p
+  %b Email:
+  = @miembro.email
+%p
+  %b Linkedin:
+  = @miembro.linkedin
+%p
+  %b Contenido:
+  = @miembro.contenido
+%p
+  %b Puesto:
+  = @miembro.puesto
+
+= link_to 'Edit', edit_miembro_path(@miembro)
+\|
+= link_to 'Back', miembros_path

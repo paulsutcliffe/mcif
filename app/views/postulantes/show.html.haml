@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Nombre:
+  = @postulante.nombre
+%p
+  %b Email:
+  = @postulante.email
+%p
+  %b Curriculum:
+  = @postulante.curriculum
+
+= link_to 'Edit', edit_postulante_path(@postulante)
+\|
+= link_to 'Back', postulantes_path

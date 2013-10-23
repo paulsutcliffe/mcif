@@ -1,0 +1,19 @@
+= form_for @postulante do |f|
+  - if @postulante.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@postulante.errors.count, "error")} prohibited this postulante from being saved:"
+      %ul
+        - @postulante.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nombre
+    = f.text_field :nombre
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :curriculum
+    = f.text_field :curriculum
+  .actions
+    = f.submit 'Save'

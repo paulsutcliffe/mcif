@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Icono:
+  = @servicio.icono
+%p
+  %b Nombre:
+  = @servicio.nombre
+%p
+  %b Contenido:
+  = @servicio.contenido
+
+= link_to 'Edit', edit_servicio_path(@servicio)
+\|
+= link_to 'Back', servicios_path

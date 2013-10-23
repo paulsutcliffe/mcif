@@ -1,0 +1,23 @@
+%h1 Listing postulantes
+
+%table
+  %tr
+    %th Nombre
+    %th Email
+    %th Curriculum
+    %th
+    %th
+    %th
+
+  - @postulantes.each do |postulante|
+    %tr
+      %td= postulante.nombre
+      %td= postulante.email
+      %td= postulante.curriculum
+      %td= link_to 'Show', postulante
+      %td= link_to 'Edit', edit_postulante_path(postulante)
+      %td= link_to 'Destroy', postulante, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Postulante', new_postulante_path

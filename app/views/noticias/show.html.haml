@@ -1,0 +1,30 @@
+%p#notice= notice
+
+%p
+  %b Titulo:
+  = @noticia.titulo
+%p
+  %b Subtitulo:
+  = @noticia.subtitulo
+%p
+  %b Contenido:
+  = @noticia.contenido
+%p
+  %b Link:
+  = @noticia.link
+%p
+  %b Tipo:
+  = @noticia.tipo
+%p
+  %b Fecha:
+  = @noticia.fecha
+%p
+  %b Categoria:
+  = @noticia.categoria
+%p
+  %b Destacado:
+  = @noticia.destacado
+
+= link_to 'Edit', edit_noticia_path(@noticia)
+\|
+= link_to 'Back', noticias_path

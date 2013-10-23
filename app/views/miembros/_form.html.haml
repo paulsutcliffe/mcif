@@ -1,0 +1,31 @@
+= form_for @miembro do |f|
+  - if @miembro.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@miembro.errors.count, "error")} prohibited this miembro from being saved:"
+      %ul
+        - @miembro.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :nombre
+    = f.text_field :nombre
+  .field
+    = f.label :tipo
+    = f.text_field :tipo
+  .field
+    = f.label :fotografia
+    = f.text_field :fotografia
+  .field
+    = f.label :email
+    = f.text_field :email
+  .field
+    = f.label :linkedin
+    = f.text_field :linkedin
+  .field
+    = f.label :contenido
+    = f.text_area :contenido
+  .field
+    = f.label :puesto
+    = f.text_field :puesto
+  .actions
+    = f.submit 'Save'

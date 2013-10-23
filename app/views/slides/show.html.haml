@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Imagen:
+  = @slide.imagen
+%p
+  %b Link:
+  = @slide.link
+
+= link_to 'Edit', edit_slide_path(@slide)
+\|
+= link_to 'Back', slides_path

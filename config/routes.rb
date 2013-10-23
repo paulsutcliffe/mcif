@@ -1,4 +1,28 @@
 Mcif::Application.routes.draw do
+  resources :noticias
+
+
+  resources :postulantes
+
+
+  resources :contactos
+
+
+  resources :proyectos
+
+
+  resources :miembros
+
+
+  resources :clientes
+
+
+  resources :servicios
+
+
+  resources :slides
+
+
   root to: 'inicio#index'
 
   get "inicio/index"

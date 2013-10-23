@@ -1,0 +1,33 @@
+%h1 Listing noticias
+
+%table
+  %tr
+    %th Titulo
+    %th Subtitulo
+    %th Contenido
+    %th Link
+    %th Tipo
+    %th Fecha
+    %th Categoria
+    %th Destacado
+    %th
+    %th
+    %th
+
+  - @noticias.each do |noticia|
+    %tr
+      %td= noticia.titulo
+      %td= noticia.subtitulo
+      %td= noticia.contenido
+      %td= noticia.link
+      %td= noticia.tipo
+      %td= noticia.fecha
+      %td= noticia.categoria
+      %td= noticia.destacado
+      %td= link_to 'Show', noticia
+      %td= link_to 'Edit', edit_noticia_path(noticia)
+      %td= link_to 'Destroy', noticia, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Noticia', new_noticia_path
