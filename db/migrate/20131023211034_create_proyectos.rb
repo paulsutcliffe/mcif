@@ -5,6 +5,7 @@ class CreateProyectos < ActiveRecord::Migration
       t.string :logo
       t.string :foto
       t.text :contenido
+      t.string :slug
 
       t.timestamps
     end

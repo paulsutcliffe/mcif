@@ -8,6 +8,7 @@ class CreateMiembros < ActiveRecord::Migration
       t.string :linkedin
       t.text :contenido
       t.string :puesto
+      t.string :slug
 
       t.timestamps
     end
