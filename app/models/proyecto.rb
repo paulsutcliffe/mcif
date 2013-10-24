@@ -3,5 +3,7 @@ class Proyecto < ActiveRecord::Base
   extend FriendlyId
 
   friendly_id :nombre, use: :slugged
+  mount_uploader :logo, ImagenUploader
+  mount_uploader :foto, SlideUploader
 
 end

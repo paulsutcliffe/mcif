@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :imagen do
-    imagen "MyString"
-    noticia_id 1
+    imagen { Rack::Test::UploadedFile.new(File.join(Rails.root,'spec','support','images','foto.jpg'))}
+    noticia
   end
 end

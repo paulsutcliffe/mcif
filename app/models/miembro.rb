@@ -4,4 +4,5 @@ class Miembro < ActiveRecord::Base
   extend FriendlyId
 
   friendly_id :nombre, use: :slugged
+  mount_uploader :fotografia, FotografiaUploader
 end

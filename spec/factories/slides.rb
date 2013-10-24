@@ -2,7 +2,7 @@
 
 FactoryGirl.define do
   factory :slide do
-    imagen "MyString"
-    link "MyString"
+    imagen { Rack::Test::UploaderFile.new(File.join(Rails.root,'spec','support','images','foto.jpg'))}
+    link{ Faker::Internet.url }
   end
 end
