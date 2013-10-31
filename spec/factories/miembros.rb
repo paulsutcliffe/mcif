@@ -3,7 +3,7 @@ require 'faker'
 FactoryGirl.define do
   factory :miembro do
     nombre { Faker::Name.name }
-    tipo "Expertos"
+    tipo {["Expertos","Directorio"].sample}
     fotografia { Rack::Test::UploadedFile.new(File.join(Rails.root,'spec','support','imagen.jpg'))}
     email { Faker::Internet.email}
     linkedin { Faker::Internet.url}

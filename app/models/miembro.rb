@@ -5,4 +5,7 @@ class Miembro < ActiveRecord::Base
 
   friendly_id :nombre, use: :slugged
   mount_uploader :fotografia, ImagenUploader
+  scope :directivos, -> { where(tipo: 'Directorio') }
+  scope :expertos, -> { where(tipo: 'Expertos') }
+
 end

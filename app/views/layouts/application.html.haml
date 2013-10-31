@@ -29,22 +29,25 @@
           %a.brand(href="#") Mcif
           .container.nav-collapse
             %ul.nav
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
+              %li= link_to "Inicio", root_path
+              %li= link_to "Nosotros", miembros_path
+              %li= link_to "Servicios", servicios_path
+              %li= link_to "Noticias", noticias_path
+              %li= link_to "Pulicaciones", noticias_path
+              %li= link_to "Contáctenos", new_contacto_path
 
     .container-fluid
 
       .row-fluid
-        .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
-              %li= link_to "Link 1", "/path1"
-              %li= link_to "Link 2", "/path2"
-              %li= link_to "Link 3", "/path3"
         .span9
           = bootstrap_flash
+
+        .span12
+          - @ticker_noticias.each do |noticia|
+            = noticia.tipo
+            = noticia.titulo
+            = noticia.fecha
+
           = yield
     
       %footer

@@ -1,31 +1,24 @@
-%h1 Listing miembros
+%h1 Nosotros
+- if current_admin
+  = link_to 'Nuevo Miembro', new_miembro_path
 
-%table
-  %tr
-    %th Nombre
-    %th Tipo
-    %th Fotografia
-    %th Email
-    %th Linkedin
-    %th Contenido
-    %th Puesto
-    %th
-    %th
-    %th
+%h2 Directorio
 
-  - @miembros.each do |miembro|
-    %tr
-      %td= miembro.nombre
-      %td= miembro.tipo
-      %td= miembro.fotografia
-      %td= miembro.email
-      %td= miembro.linkedin
-      %td= miembro.contenido
-      %td= miembro.puesto
-      %td= link_to 'Show', miembro
-      %td= link_to 'Edit', edit_miembro_path(miembro)
-      %td= link_to 'Destroy', miembro, :method => :delete, :data => { :confirm => 'Are you sure?' }
+- @directivos.each do |directivo|
+  = link_to directivo.nombre, directivo
+  - if current_admin
+    = link_to 'Editar', edit_miembro_path(directivo)
+    = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+  %br
 
-%br
 
-= link_to 'New Miembro', new_miembro_path
+%h2 Expertos
+
+- @expertos.each do |experto|
+  = link_to experto.nombre, experto
+  = experto.puesto
+  - if current_admin
+    = link_to 'Editar', edit_miembro_path(experto)
+    = link_to 'Eliminar', experto, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
+  %br
+
