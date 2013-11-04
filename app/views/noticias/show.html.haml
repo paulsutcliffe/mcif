@@ -1,30 +1,15 @@
-%p#notice= notice
-
+%h1 Noticias
 %p
-  %b Titulo:
   = @noticia.titulo
 %p
-  %b Subtitulo:
   = @noticia.subtitulo
 %p
-  %b Contenido:
   = @noticia.contenido
-%p
-  %b Link:
-  = @noticia.link
-%p
-  %b Tipo:
-  = @noticia.tipo
-%p
-  %b Fecha:
-  = @noticia.fecha
-%p
-  %b Categoria:
-  = @noticia.categoria
-%p
-  %b Destacado:
-  = @noticia.destacado
 
-= link_to 'Edit', edit_noticia_path(@noticia)
-\|
-= link_to 'Back', noticias_path
+= link_to 'compartir en facebook', 'http://www.facebook.com/sharer.php?u=' + request.original_url
+= link_to 'compartir en linkedin', 'http://www.linkedin.com/shareArticle?mini=true&url=' + request.original_url + '&title=' + @noticia.titulo + '&summary=' + @noticia.slug + '&source=' + @noticia.link
+
+- if current_admin
+  = link_to 'Edit', edit_noticia_path(@noticia)
+\
+= link_to 'Regresar', noticias_path

@@ -15,7 +15,7 @@ end
   FactoryGirl.create :contacto
 end
 
-3.times do
+12.times do
   FactoryGirl.create :imagen
 end
 
@@ -39,6 +39,6 @@ end
   FactoryGirl.create :slide
 end
 
-3.times do
+6.times do
   FactoryGirl.create :video
 end

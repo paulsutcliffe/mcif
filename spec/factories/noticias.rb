@@ -12,6 +12,6 @@ FactoryGirl.define do
     tipo "noticia"
     fecha "2013-10-23"
     categoria "boletín"
-    destacado false
+    destacado {[true,false].sample}
   end
 end

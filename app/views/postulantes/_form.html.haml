@@ -1,4 +1,4 @@
-= form_for @postulante do |f|
+= form_for @postulante, :html => { :multipart => true } do |f|
   - if @postulante.errors.any?
     #error_explanation
       %h2= "#{pluralize(@postulante.errors.count, "error")} prohibited this postulante from being saved:"
@@ -14,6 +14,6 @@
     = f.text_field :email
   .field
     = f.label :curriculum
-    = f.text_field :curriculum
+    = f.file_field :curriculum
   .actions
     = f.submit 'Save'
