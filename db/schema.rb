@@ -82,10 +82,11 @@ ActiveRecord::Schema.define(:version => 20131028201357) do
     t.string   "tipo"
     t.date     "fecha"
     t.string   "categoria"
+    t.string   "subcategoria"
     t.boolean  "destacado"
     t.string   "slug"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "postulantes", :force => true do |t|

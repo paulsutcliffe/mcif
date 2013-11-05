@@ -1,4 +1,4 @@
-%h1 Noticias
+%h1= @noticia.categoria + ' ' + @noticia.subcategoria
 %p
   = @noticia.titulo
 %p
@@ -10,6 +10,6 @@
 = link_to 'compartir en linkedin', 'http://www.linkedin.com/shareArticle?mini=true&url=' + request.original_url + '&title=' + @noticia.titulo + '&summary=' + @noticia.slug + '&source=' + @noticia.link
 
 - if current_admin
-  = link_to 'Edit', edit_noticia_path(@noticia)
+  = link_to 'Editar', edit_noticia_path(@noticia)
 \
 = link_to 'Regresar', noticias_path

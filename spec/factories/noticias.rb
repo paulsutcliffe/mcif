@@ -11,7 +11,8 @@ FactoryGirl.define do
     link { Faker::Internet.url}
     tipo "noticia"
     fecha "2013-10-23"
-    categoria "boletín"
+    categoria {['Noticia','Publicación'].sample}
+    subcategoria {['Mcif','Recomendada'].sample}
     destacado {[true,false].sample}
   end
 end

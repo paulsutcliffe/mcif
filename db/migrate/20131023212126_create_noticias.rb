@@ -8,6 +8,7 @@ class CreateNoticias < ActiveRecord::Migration
       t.string :tipo
       t.date :fecha
       t.string :categoria
+      t.string :subcategoria
       t.boolean :destacado
       t.string :slug
 

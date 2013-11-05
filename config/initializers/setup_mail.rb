@@ -8,4 +8,3 @@ ActionMailer::Base.smtp_settings = {
   :enable_starttls_auto => false
 }
 
-ActionMailer::Basedefault_url_options[:host] = "laboralmedicalperu.com"

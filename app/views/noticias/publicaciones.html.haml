@@ -1,0 +1,7 @@
+%h1= 'Publicación ' + params[:subcategoria]
+- if current_admin
+  = link_to 'Nueva Publicación', new_noticia_path
+
+= render('lista')
+
+%br

@@ -1,8 +1,7 @@
-%h1 Noticias
+%h1= 'Noticia ' + params[:subcategoria]
 - if current_admin
   = link_to 'Nueva Noticia', new_noticia_path
 
 = render('lista')
 
 %br
-
