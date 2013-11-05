@@ -20,13 +20,16 @@
     = f.text_field :link
   .field
     = f.label :tipo
-    = f.text_field :tipo
+    = f.select :tipo, Noticia::TIPOS.collect { |i| [i]}
   .field
     = f.label :fecha
     = f.date_select :fecha
   .field
     = f.label :categoria
-    = f.text_field :categoria
+    = f.select :categoria, Noticia::CATEGORIAS.collect { |i| [i]}
+  .field
+    = f.label :subcategoria
+    = f.select :subcategoria, Noticia::SUBCATEGORIAS.collect { |i| [i]}
   .field
     = f.label :destacado
     = f.check_box :destacado
@@ -35,7 +38,11 @@
     = imagen_form.file_field :imagen
     = imagen_form.link_to_remove "Eliminar imagen"
   = f.link_to_add "Agregar imagen", :imagenes
-
+  %br
+  = f.fields_for :videos do |video_form|
+    = video_form.text_field :link
+    = video_form.link_to_remove "Eliminar video"
+  = f.link_to_add "Agregar video", :videos
 
   .actions
     = f.submit 'Save'
