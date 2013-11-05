@@ -36,7 +36,7 @@ gem "capistrano"
 
 # To use debugger
 # gem 'debugger'
-
+gem "nested_form"
 gem "twitter-bootstrap-rails", :group => :assets
 gem "rvm-capistrano"
 gem "haml"

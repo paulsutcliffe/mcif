@@ -6,6 +6,9 @@
 %p
   = @noticia.contenido
 
+- @noticia.imagenes.each do |imagen|
+  = image_tag imagen.imagen_url(:regular)
+
 = link_to 'compartir en facebook', 'http://www.facebook.com/sharer.php?u=' + request.original_url
 = link_to 'compartir en linkedin', 'http://www.linkedin.com/shareArticle?mini=true&url=' + request.original_url + '&title=' + @noticia.titulo + '&summary=' + @noticia.slug + '&source=' + @noticia.link
 

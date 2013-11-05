@@ -3,9 +3,16 @@
 
 - @slides.each do |slide|
   = image_tag slide.imagen_url(:full)
+  - if current_admin
+    = link_to 'Editar', edit_slide_path(slide)
+    = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
 
 - @servicios.each do |servicio|
   = image_tag servicio.icono_url(:thumb)
 
 - @clientes.each do |cliente|
   = image_tag cliente.logo_url(:thumb)
+  - if current_admin
+    = link_to 'Editar', edit_cliente_path(cliente)
+    = link_to 'Eliminar', cliente, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
+

@@ -36,7 +36,13 @@
               %li= link_to "Noticias Recomendadas", noticias_recomendadas_path
               %li= link_to "Pulicaciones MCIF", publicaciones_mcif_path
               %li= link_to "Pulicaciones Recomendadas", publicaciones_recomendadas_path
-              %li= link_to "Contáctenos", new_contacto_path
+              - if current_admin
+                %li= link_to "Mensajes", contactos_path
+              - else
+                %li= link_to "Contáctenos", new_contacto_path
+              - if current_admin
+                %li= link_to "Cerrar Sesión", destroy_admin_session_path
+
 
     .container-fluid
 
@@ -47,7 +53,7 @@
         .span12
           - @ticker_noticias.each do |noticia|
             = noticia.tipo
-            = noticia.titulo
+            = link_to noticia.titulo, noticia
             = noticia.fecha
 
           = yield

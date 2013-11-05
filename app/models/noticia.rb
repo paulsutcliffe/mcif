@@ -6,6 +6,7 @@ class Noticia < ActiveRecord::Base
   has_many :charts
   has_many :videos
   has_many :imagenes
+  accepts_nested_attributes_for :imagenes, :allow_destroy => true
 
   scope :clase, ->(subcategoria) { where("subcategoria = ?", subcategoria) }
   scope :noticia, -> { where("categoria = ?", "Noticia") }
