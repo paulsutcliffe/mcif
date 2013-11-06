@@ -7,7 +7,7 @@ ActiveSupport::Inflector.inflections do |inflect|
 #   inflect.singular /^(ox)en/i, '\1'
   inflect.irregular 'Noticia', 'Noticias'
   inflect.irregular 'Imagen', 'Imagenes'
-#   inflect.uncountable %w( fish sheep )
+  inflect.uncountable %w( Mcif )
 end
 #
 # These inflection rules are supported but not enabled by default:
