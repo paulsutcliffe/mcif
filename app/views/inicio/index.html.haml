@@ -1,28 +1,36 @@
-%h1 Inicio#index
-%p Find me in app/views/inicio/index.html.haml
 
-- if current_admin
-  = link_to 'Nuevo Banner', new_slide_path
+= admin_create('Nuevo Banner', new_slide_path)
 
-%br
 
-- @slides.each do |slide|
-  = image_tag slide.imagen_url(:full)
-  - if current_admin
-    = link_to 'Editar', edit_slide_path(slide)
-    = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
+= render 'bootstrap3_carousel'
 
-- @servicios.each do |servicio|
-  = image_tag servicio.icono_url(:thumb)
+#presentacion.container
+  .region
+    .region-inner
+      %p
+        Somos profesionales con experiencia en sistemas financieros y de gestión empresarial. 
+        Nos focalizamos en los mercados financieros. Brindamos asesoría en análisis económico, financiero y regulación.
+
+#servicios-region
+  .container
+    - @servicios.each_slice(2) do |servicio|
+      .region
+        - servicio.each do |servicio|
+          .region-inner
+            = image_tag servicio.icono_url(:thumb)
+
 
 - if current_admin
   = link_to 'Nuevo Cliente', new_cliente_path
 
-%br
+#clientes-region.container
 
-- @clientes.each do |cliente|
-  = link_to image_tag(cliente.logo_url(:thumb)), cliente.link
-  - if current_admin
-    = link_to 'Editar', edit_cliente_path(cliente)
-    = link_to 'Eliminar', cliente, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
+  - @clientes.each_slice(6) do |cliente|
+    .region
+      - cliente.each do |cliente|
+        .region-inner
+          = link_to image_tag(cliente.logo_url(:thumb)), cliente.link
+          = admin_controls('Editar',  edit_cliente_path(cliente), 'down')
+          - if current_admin
+            = link_to 'Eliminar', cliente, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
 

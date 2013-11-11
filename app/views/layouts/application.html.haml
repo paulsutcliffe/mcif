@@ -1,63 +1,30 @@
-!!! 5
-%html(lang="en")
-  %head
-    %meta(charset="utf-8")
-    %meta(http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1")
-    %meta(name="viewport" content="width=device-width, initial-scale=1.0")
-    %title= content_for?(:title) ? yield(:title) : "Mcif"
-    = csrf_meta_tags
-    / Le HTML5 shim, for IE6-8 support of HTML elements
-    /[if lt IE 9]
-      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
-    = stylesheet_link_tag "application", :media => "all"
-    = favicon_link_tag 'apple-touch-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
-    = favicon_link_tag 'apple-touch-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
-    = favicon_link_tag 'apple-touch-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
-    = favicon_link_tag 'apple-touch-icon-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
-    = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
-    = javascript_include_tag "application"
+= render 'layouts/html'
 
+%body{id: bodyid, class: bodyclass}
+  %header#main-header
+    .container
+      .region
+        .region-inner
+          %h1#logo
+            = link_to image_tag('logo.png', title: 'MCIF', alt: 'MCIF'), root_path, class: 'navbar-brand'
+          = render 'layouts/nav_advanced' 
 
-  %body
-    .navbar.navbar-fluid-top
-      .navbar-inner
-        .container-fluid
-          %a.btn.btn-navbar(data-target=".nav-collapse" data-toggle="collapse")
-            %span.icon-bar
-            %span.icon-bar
-            %span.icon-bar
-          %a.brand(href="#") Mcif
-          .container.nav-collapse
-            %ul.nav
-              %li= link_to "Inicio", root_path
-              %li= link_to "Nosotros", miembros_path
-              %li= link_to "Servicios", servicios_path
-              %li= link_to "Noticias MCIF", noticias_mcif_path
-              %li= link_to "Noticias Recomendadas", noticias_recomendadas_path
-              %li= link_to "Pulicaciones MCIF", publicaciones_mcif_path
-              %li= link_to "Pulicaciones Recomendadas", publicaciones_recomendadas_path
-              - if current_admin
-                %li= link_to "Mensajes", contactos_path
-              - else
-                %li= link_to "Contáctenos", new_contacto_path
-              - if current_admin
-                %li= link_to "Cerrar Sesión", destroy_admin_session_path, :method => :delete
-
-
-    .container-fluid
-
-      .row-fluid
-        .span9
-          = bootstrap_flash
-
-        .span12
+  #ticket
+    .container
+      .region
+        .region-inner
           - @ticker_noticias.each do |noticia|
             = noticia.tipo
             = link_to noticia.titulo, noticia
             = noticia.fecha
 
-          = yield
-    
-      %footer
-        %p &copy; Company 2013
-    = render 'shared/google_analytics'
+  #content
+    = yield
+
+  %footer#main-footer
+
+
+
+
+  = javascript_include_tag 'application'
+  = yield :javascript
