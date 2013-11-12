@@ -1,9 +1,16 @@
 
 
 body {font-family: 'Lato'}
-h1, h2, h3, h4, h5, h6 {margin: 0; line-height: 100%}
+h1, h2, h3, h4, h5, h6 {margin: 0; line-height: 100%; font-family: 'Lato'}
 a {font-family: 'Lato'}
 
+.navbar-default {
+  .navbar-nav {
+    & > li {
+      a {font-weight: bold}
+    }  
+  }
+}
 
 .region-title {
   & > h2.title {text-transform: uppercase}

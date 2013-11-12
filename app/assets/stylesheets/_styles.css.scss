@@ -2,22 +2,51 @@
 .navbar-default,
 .navbar-default .navbar-collapse, .navbar-default .navbar-form {border: 0}
 .navbar-default {
-  background: none;
-.navbar-nav {
-  & > li {
-    & > a,
-    & > span {text-transform: uppercase}
-    & > span {color: $gray}
-    &.last {
-      a {padding-right: 0}
-    }  
+  background: none; 
+  .navbar-collapse {
+    .navbar-nav {
+      margin-top: 45px;
+      & > li {
+        & > a,
+        & > span {text-transform: uppercase; padding: 10px 25px; @include inline-block; font-weight: bold}
+        & > a:hover,
+        & > span {color: $gray}
+        &.last {
+          a {padding-right: 0}
+        }  
+      }
+    }
   }
+  .bevel {border-bottom: 1px solid $bevel-black-bottom; border-top: 1px solid $bevel-black-top;}
 }
+
+.backLava  {width: 100%; border-bottom: 4px solid $green; padding-bottom: 42px !important}
+@media (max-width: 767px) {
+  
+  .navbar-toggle {margin: 0 auto 10px; float: none; display: block}
+  .navbar-default .navbar-collapse .navbar-nav > li > a, 
+  .navbar-default .navbar-collapse .navbar-nav > li > span {display: block; text-align: center}
+  .navbar-default .navbar-collapse .navbar-nav > li > a:hover, 
+  .navbar-default .navbar-collapse .navbar-nav > li > span {color: white; text-shadow: 1px 1px 1px black}
+  .backLava {border: 0; background: $green; padding-bottom: 0 !important}
 }
+@media (max-width: 980px) {
+  #logo a {float: none; margin: 0 auto; display: block; text-align: center}
+  .navbar-default .navbar-collapse .navbar-nav {margin-top: 0}
+}
+
+@media (min-width: 1280px) {
+  .navbar-default .navbar-collapse .navbar-nav > li > a, 
+  .navbar-default .navbar-collapse .navbar-nav > li > span {padding: 10px 45px}
+}
+
+/*.backLava  {top: 100% !important; width: 100%; height: 4px !important; content: ""; background: $green}*/
+/*.backLava:after {@include absolute(top, left, 100%, 0); width: 100%; height: 4px; content: ""; background: $green}*/
+
 
 #main-header {
   background: $black;
-  .region-inner {height: 120px}
+  .region-inner {min-height: 120px}
 }
 #main-footer {
   background: $gray; min-height: 200px
@@ -85,3 +114,5 @@ $icons-sprite-dimensions: true;
   }
 }
 */
+
+

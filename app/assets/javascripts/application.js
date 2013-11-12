@@ -13,4 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery-easing/jquery.easing.1.3.js
+//= require jquery-lavalamp-1.3.5/jquery.lavalamp-1.3.5.min.js
+//= require jquery-lavalamp-1.3.5/jquery.lavalamp-init.js
 //= require scripts.js
+

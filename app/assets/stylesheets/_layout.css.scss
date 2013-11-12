@@ -9,16 +9,16 @@
 
 #main-header {
   #logo {
-    @extend .col-lg-4;
-    @extend .col-md-4;
-    @extend .col-sm-4;
-    @extend .col-xs-4;
+    @extend .col-lg-2;
+    @extend .col-md-2;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
   }
   .navbar {
-    @extend .col-lg-8;
-    @extend .col-md-8;
-    @extend .col-sm-8;
-    @extend .col-xs-8;  
+    @extend .col-lg-10;
+    @extend .col-md-10;
+    @extend .col-sm-12;
+    @extend .col-xs-12;  
   }
 }
 
