@@ -52,7 +52,12 @@
   background: $gray; min-height: 200px
 }
 
-#ticket {background: $green}
+#ticket {background: $green;
+  .region {
+    overflow: hidden;
+    .region-inner {width: 100%}
+  }
+}
 
 #logo {position: relative; z-index: 200; margin-top: 20px; margin-bottom: 20px;
   @extend .clearfix;
@@ -79,29 +84,33 @@ ul {
   @include no-bullet;
 }
 
-/*
+
 $icons-sprite-dimensions: true;
-@import "icons/*.png"; 
+@import "icons/*.png"; /**/
 @include all-icons-sprites;
+
+
+i {
+  display: block; margin-right: 10px; float: left;
+  &.person_chart {@include icons-sprite(person_chart)}
+}
 
 #main-header {
   i.icon {
     display: block; margin-left: 10px;
-    &.mail_small {@include icons-sprite(mail_small)}
-    &.location_small {@include icons-sprite(location_small)}
-    &.facebook_small {@include icons-sprite(facebook_small)}
-    &.telefono_small {@include icons-sprite(telefono_small)}
+    &.mail_small {/*@include icons-sprite(mail_small)*/}
   }
 }
 
 #main-footer {
   i.icon {
     display: block;
-    &.mail {@include icons-sprite(mail)}
-    &.location {@include icons-sprite(location)}
-    &.facebook {@include icons-sprite(facebook)}
-    &.telefono {@include icons-sprite(telefono)}
   }
+  * {color: white}
+}
+
+#footer-bottom {
+  margin-top: 100px
 }
 
 .social-links {
@@ -113,6 +122,13 @@ $icons-sprite-dimensions: true;
 
   }
 }
-*/
+
+#servicios-region {
+  @include vertical-middle(50px);
+  img {@extend .img-left}
+  h2.title,
+  h3 {color: white}
+}
+
 
 

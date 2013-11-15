@@ -6,31 +6,40 @@
 
 #presentacion.container
   .region
+    .region-title
+      %h2.title
+        MercADO DE CAPITALES, INVEsRSIONES Y FINANZAS CONSULTORES S.A. - MC&F
     .region-inner
+      %i.person_chart
       %p
         Somos profesionales con experiencia en sistemas financieros y de gestión empresarial. 
         Nos focalizamos en los mercados financieros. Brindamos asesoría en análisis económico, financiero y regulación.
 
 #servicios-region
   .container
+    .region
+      .region-title
+        %h2.title
+          Servicios
     - @servicios.each_slice(2) do |servicio|
       .region
         - servicio.each do |servicio|
           .region-inner
             = image_tag servicio.icono_url(:thumb)
+            .vertical-wrapper
+              .vertical
+                %h3.vertical-inner
+                  = servicio.nombre
 
 
 - if current_admin
   = link_to 'Nuevo Cliente', new_cliente_path
 
 #clientes-region.container
+  .region
+    .region-title
+      %h2.title
+        Clientes
+  = render 'clientes_carousel'
 
-  - @clientes.each_slice(6) do |cliente|
-    .region
-      - cliente.each do |cliente|
-        .region-inner
-          = link_to image_tag(cliente.logo_url(:thumb)), cliente.link
-          = admin_controls('Editar',  edit_cliente_path(cliente), 'down')
-          - if current_admin
-            = link_to 'Eliminar', cliente, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
-
+ 

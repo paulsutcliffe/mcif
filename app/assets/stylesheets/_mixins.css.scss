@@ -1,4 +1,17 @@
+.img-left {float: left; margin: 0 20px 20px 0}
 
+
+@mixin vertical-middle($height) {
+  .vertical-wrapper {
+    display: table; height: $height;
+    .vertical {
+      display: table-row;
+      .vertical-inner {
+        display: table-cell; vertical-align: middle
+      }
+    }
+  }
+}
 
 
 
