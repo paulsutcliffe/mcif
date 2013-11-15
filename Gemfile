@@ -33,7 +33,7 @@ gem "unicorn"
 
 # Deploy with Capistrano
 gem "capistrano"
-
+gem 'unicorn-worker-killer'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
 
