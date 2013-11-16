@@ -1,24 +1,52 @@
-%h1 Nosotros
-- if current_admin
-  = link_to 'Nuevo Miembro', new_miembro_path
+#region-miembros.container
+  .region
+    .region-title
+      %h2.title Nosotros
+      %span.subtitle Conozca al equipo
+  
+    .region-inner
+      = admin_create('Nuevo Miembro', new_miembro_path)
 
-%h2 Directorio
+      %p 
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
 
-- @directivos.each do |directivo|
-  = link_to directivo.nombre, directivo
-  - if current_admin
-    = link_to 'Editar', edit_miembro_path(directivo)
-    = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
-  %br
+      %p
+        A small river named Duden flows by their place and supplies it with the necessary regelialia. 
+        It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+        Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic 
+        life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+    %figure.region-inner
+      = image_tag 'img-nosotros-index.jpg', class: 'img-full'
+
+#region-miembros-directorio
+  .container
+    .region
+      .region-title
+        %h2.title Directorio
+      
+      - @directivos.each do |directivo|
+        .region-inner
+          %h3
+            = link_to directivo.nombre, directivo
+          - if current_admin
+            = link_to 'Editar', edit_miembro_path(directivo)
+            = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+
+#region-miembros-expertos.container
+  .region
+    .region-title
+      %h2.title Expertos
 
 
-%h2 Expertos
-
-- @expertos.each do |experto|
-  = link_to experto.nombre, experto
-  = experto.puesto
-  - if current_admin
-    = link_to 'Editar', edit_miembro_path(experto)
-    = link_to 'Eliminar', experto, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
-  %br
+    - @expertos.each do |experto|
+      .region-inner
+        %h3
+          = link_to experto.nombre, experto
+        %span.subtitle
+          = experto.puesto
+        - if current_admin
+          = link_to 'Editar', edit_miembro_path(experto)
+          = link_to 'Eliminar', experto, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
+        %br
 

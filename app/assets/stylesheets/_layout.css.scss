@@ -24,28 +24,33 @@
   }
 }
 
+/*
+HOME
+================================== */
 #presentacion {
   .region-inner {
     @extend .col-lg-6;
-    @extend .col-md-10;
+    @extend .col-md-12;
     @extend .col-sm-12;
     @extend .col-xs-12;
    
     @extend .col-lg-offset-3;
-    @extend .col-md-offset-1;
+   /* @extend .col-md-offset-1;
     @extend .col-sm-offset-1;
-    @extend .col-xs-offset-1;
+    @extend .col-xs-offset-1;*/
   }
-  h2.title {@extend .h2-alt}
+  h2.title {@extend .h2-alt; text-align: center; @extend .title-bottom}
   i {@extend .img-left}
+  p {overflow: hidden}
 }
 
 #servicios-region {
+  h2.title {text-align: center; @extend .title-bottom}
   .region-inner {
     @extend .col-lg-4;
     @extend .col-md-6;
     @extend .col-sm-6;  /*980 x 1200*/
-    @extend .col-xs-6; /* 800x1200*/
+    @extend .col-xs-12; /* 800x1200*/
 
     img {margin-bottom: 0}
     @extend .m-bottom-m;
@@ -55,6 +60,7 @@
 
 
 #clientes-region {
+  h2.title {text-align: center; @extend .title-bottom}
   padding-bottom: 80px;
 }
 #carousel-clientes {
@@ -64,7 +70,7 @@
     @extend .col-lg-2;
     @extend .col-md-2;
     @extend .col-sm-2;
-    @extend .col-xs-2;
+    @extend .col-xs-6;
     }
   }
   .carousel-indicators {
@@ -72,3 +78,47 @@
     li {background: $gray; height: 15px; width: 15px; border: 0; &.active {background: darken($gray, 40%)}}
   }
 }
+
+
+/*
+MIEMBROS index show
+================================== */
+
+#region-miembros {
+  .region-inner {
+    @extend .col-lg-8;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+  }
+  figure.region-inner {
+    @extend .col-lg-12;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+ 
+  }
+}
+
+#region-miembros-directorio,
+#region-miembros-expertos {
+  .region-inner {
+    @extend .col-lg-4;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+  }
+  h2.title {text-align: center; @extend .title-bottom}
+  h3 {a {color: black; text-transform: uppercase}}
+}
+
+#region-miembros-directorio {
+  background: $sand;
+  h2.title {color: white}
+  h3 {a {color: white}}
+}
+
+
+

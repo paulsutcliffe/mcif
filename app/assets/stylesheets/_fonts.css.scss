@@ -7,6 +7,7 @@ h2 {font-size:  28px}
 h3 {font-size: 16px}
 
 .h2-alt {font-size: 18px; font-weight: bold}
+.title-bottom {margin-bottom: 50px}
 
 a {font-family: 'Lato'}
 p {text-align: justify}
@@ -20,5 +21,9 @@ p {text-align: justify}
 }
 
 .region-title {
-  & > h2.title {text-transform: uppercase; text-align: center; font-weight: 300; margin: 47px 0 50px}
+  & > h2.title {text-transform: uppercase; font-weight: 300; margin-top: 47px; margin-bottom: 8px; line-height: 100%}
+  & > h2.title + .subtitle {font-size: 20px; color: $gray; text-transform: uppercase; font-weight: 300; line-height: 100%;
+   display: block; margin-bottom: 8px}
 }
+
+
