@@ -6,6 +6,8 @@
 .m-bottom-m {margin-bottom: 40px}
 .m-bottom-l {margin-bottom: 60px}
 
+.default-button {@extend .btn; @extend .btn-default; text-transform: uppercase}
+
 @mixin vertical-middle($height) {
   .vertical-wrapper {
     display: table; height: $height;

@@ -1,17 +1,26 @@
-%p#notice= notice
+#region-miembro.container
+  .region
+    .region-title
+      %h2.title Nosotros
+      %span.subtitle 
+        = @miembro.nombre
+      %p.puesto= @miembro.puesto
+      %p.email
+        %i.icon.e_mail_marketing
+        = @miembro.email
+    
 
-%p
-  = @miembro.nombre
-%p
-  = @miembro.puesto
-%p
-  = image_tag @miembro.fotografia_url(:regular)
-%p
-  = @miembro.email
-%p
-  = @miembro.contenido
+    - if @miembro.fotografia_url
+      %figure.region-inner
+        = image_tag @miembro.fotografia_url(:regular)
+     
+      .region-inner
+        = @miembro.contenido
+    - else
+      .region-inner.no-image
+        = @miembro.contenido
 
-= link_to 'Regresar', miembros_path
+  = link_to 'Regresar', miembros_path, class: 'default-button'
 - if current_admin
   = link_to 'Editar', edit_miembro_path(@miembro)
   \|

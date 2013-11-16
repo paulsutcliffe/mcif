@@ -21,7 +21,7 @@ p {text-align: justify}
 }
 
 .region-title {
-  & > h2.title {text-transform: uppercase; font-weight: 300; margin-top: 47px; margin-bottom: 8px; line-height: 100%}
+  & > h2.title {text-transform: uppercase; font-weight: bold; margin-top: 47px; margin-bottom: 8px; line-height: 100%}
   & > h2.title + .subtitle {font-size: 20px; color: $gray; text-transform: uppercase; font-weight: 300; line-height: 100%;
    display: block; margin-bottom: 8px}
 }

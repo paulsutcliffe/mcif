@@ -102,6 +102,7 @@ $icons-sprite-dimensions: true;
 i {
   display: block; margin-right: 10px; float: left;
   &.person_chart {@include icons-sprite(person_chart)}
+  &.e_mail_marketing {@include icons-sprite(e_mail_marketing)}
 }
 
 #main-header {
@@ -140,4 +141,4 @@ i {
   h3 {color: white}
 }
 
-
+.icon {@include inline-block}
