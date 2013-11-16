@@ -2,11 +2,11 @@
 #carousel-clientes.carousel.slide
 
   %ol.carousel-indicators
-    - @clientes.each_with_index do |cliente, index|
+    - @clientes.each_slice(6).each_with_index do |cliente, index|
       - if index == 0
-        %li.active{:'data-target' => '#carousel-clientes', :'data-slide-to' => index}
+        %li.active{:'data-target' => '#carousel-clientes', :'data-slide-to' => index.to_s}
       - else
-        %li{:'data-target' => '#carousel-clientes', :'data-slide-to' => index}
+        %li{:'data-target' => '#carousel-clientes', :'data-slide-to' => index.to_s}
 
   .carousel-inner
     - @clientes.each_slice(6).each_with_index do |cliente, index|
@@ -30,6 +30,6 @@
                 = link_to 'Eliminar', cliente, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }       
       
 
-  = link_to content_tag(:span, 'left', class: 'icon-prev'), '#carousel-clientes', :'data-slide' => 'prev'
-  = link_to content_tag(:span, 'right', class: 'icon-next'), '#carousel-clientes', :'data-slide' => 'next'
+  = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-left'), '#carousel-clientes', :'data-slide' => 'prev', class: 'left carousel-control'
+  = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-right'), '#carousel-clientes', :'data-slide' => 'next', class: 'right carousel-control'
 

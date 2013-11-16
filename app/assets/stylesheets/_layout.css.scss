@@ -7,6 +7,8 @@
   @extend .col-xs-12;
 }
 
+.container {padding-bottom: 40px}
+
 #main-header {
   #logo {
     @extend .col-lg-2;
@@ -22,23 +24,51 @@
   }
 }
 
+#presentacion {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-10;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+   
+    @extend .col-lg-offset-3;
+    @extend .col-md-offset-1;
+    @extend .col-sm-offset-1;
+    @extend .col-xs-offset-1;
+  }
+  h2.title {@extend .h2-alt}
+  i {@extend .img-left}
+}
 
 #servicios-region {
   .region-inner {
-    @extend .col-lg-6;
+    @extend .col-lg-4;
     @extend .col-md-6;
-    @extend .col-sm-12;
-    @extend .col-xs-4;
+    @extend .col-sm-6;  /*980 x 1200*/
+    @extend .col-xs-6; /* 800x1200*/
+
+    img {margin-bottom: 0}
+    @extend .m-bottom-m;
+    text-transform: uppercase
   }
 }
 
+
+#clientes-region {
+  padding-bottom: 80px;
+}
 #carousel-clientes {
   .item {
+    text-align: center;
     .slide {
     @extend .col-lg-2;
     @extend .col-md-2;
     @extend .col-sm-2;
     @extend .col-xs-2;
     }
+  }
+  .carousel-indicators {
+    text-align: right; left: auto; right: 20px; bottom: -40px;
+    li {background: $gray; height: 15px; width: 15px; border: 0; &.active {background: darken($gray, 40%)}}
   }
 }

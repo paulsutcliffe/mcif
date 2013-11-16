@@ -64,6 +64,15 @@
   a {padding: 0}
 }
 
+.carousel-control {
+  width: 40px; 
+  &.left,
+  &.right {background: none;}
+  &.left {left: -20px; span{left: 0 !important}}
+  &.right {right: -20px; span {right: 0 !important}}
+  span {color: white; background: $gray; width: auto !important; padding: 10px; margin-top: -20px !important}
+}
+
 
 
 #carousel-generic {

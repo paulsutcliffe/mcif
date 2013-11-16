@@ -21,15 +21,14 @@
       .region-title
         %h2.title
           Servicios
-    - @servicios.each_slice(2) do |servicio|
-      .region
-        - servicio.each do |servicio|
-          .region-inner
-            = image_tag servicio.icono_url(:thumb)
-            .vertical-wrapper
-              .vertical
-                %h3.vertical-inner
-                  = servicio.nombre
+    .region
+      - @servicios.each do |servicio|
+        .region-inner
+          = image_tag servicio.icono_url(:thumb)
+          .vertical-wrapper
+            .vertical
+              %h3.vertical-inner
+                = servicio.nombre
 
 
 - if current_admin
