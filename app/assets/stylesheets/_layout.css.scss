@@ -153,3 +153,39 @@ MIEMBROS index show
 }
 
 
+/*
+NOTICIAS index show
+================================== */
+
+#region-noticia {
+  .region-inner {
+    @extend .col-lg-8;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+  }
+
+  .region-inner.no-image {
+    @extend .col-lg-12;
+    @extend .col-md-12;
+    @extend .col-sm-12;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+  }
+
+  figure.region-inner {
+    @extend .col-lg-4;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+    img {
+      @extend .img-full; @extend .m-bottom-s;
+    }
+  }
+
+}

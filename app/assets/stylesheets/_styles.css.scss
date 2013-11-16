@@ -103,6 +103,8 @@ i {
   display: block; margin-right: 10px; float: left;
   &.person_chart {@include icons-sprite(person_chart)}
   &.e_mail_marketing {@include icons-sprite(e_mail_marketing)}
+  &.facebook_2 {@include icons-sprite(facebook_2)}
+  &.linkedin_2 {@include icons-sprite(linkedin_2)}
 }
 
 #main-header {
