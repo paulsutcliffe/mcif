@@ -1,25 +1,58 @@
-%h2 Destacadas
 
-- @destacados.each do |destacado|
-  = link_to destacado.titulo, destacado
-  = destacado.fecha
-  = link_to 'Leer más', destacado
-  - if current_admin
-    = link_to 'Editar', edit_noticia_path(destacado)
-    = link_to 'Eliminar', destacado, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
-  %br
-%br
+#region-noticias-destacados.container
+  .region
+    .region-title
+      %h2.title Destacadas
+      - @destacados.each do |destacado|
 
-- Noticia::TIPOS.each do |tipo|
-  = tipo
+        .region-inner
+          = link_to destacado.titulo, destacado
+          = destacado.fecha
+          = link_to 'Leer más', destacado
+          - if current_admin
+            = link_to 'Editar', edit_noticia_path(destacado)
+            = link_to 'Eliminar', destacado, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
 
-%br
 
-- @noticias.each do |noticia|
-  = image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
-  = link_to noticia.titulo, noticia
-  - if current_admin
-    = link_to 'Editar', edit_noticia_path(noticia)
-    = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
-  %br
+
+#region-noticias-list.container
+  .region
+    .region-title
+
+
+
+
+#carousel-noticias-list.carousel.slide.container
+  .region
+    .region-title
+      %ol.carousel-indicators
+        - Noticia::TIPOS.each_with_index do |tipo, index|
+          - if index == 0
+            %li.active{:'data-target' => '#carousel-noticias-list', :'data-slide-to' => index}
+              %h2.title= tipo
+          - else
+            %li{:'data-target' => '#carousel-noticias-list', :'data-slide-to' => index}
+              %h2.title= tipo
+
+    .carousel-inner
+      - @noticias.each_slice(4).each_with_index do |noticia, index|
+        - if index == 0
+          .item.active
+            -  noticia.each do |noticia|
+              .region-inner
+                = image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
+                link_to noticia.titulo, noticia
+                = admin_controls('Editar', edit_noticia_path(noticia), 'down')       
+                - if current_admin
+                  = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
+        - else
+          .item
+            -  noticia.each do |noticia|
+              .region-inner
+                = image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
+                = link_to noticia.titulo, noticia
+                = admin_controls('Editar', edit_noticia_path(noticia), 'down')       
+                - if current_admin
+                  = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
+
 

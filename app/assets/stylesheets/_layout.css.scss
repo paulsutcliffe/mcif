@@ -63,6 +63,8 @@ HOME
   h2.title {text-align: center; @extend .title-bottom}
   padding-bottom: 80px;
 }
+
+
 #carousel-clientes {
   .item {
     text-align: center;
@@ -157,6 +159,20 @@ MIEMBROS index show
 NOTICIAS index show
 ================================== */
 
+#carousel-noticias-list {
+  .region-inner {
+    @extend .col-lg-3;
+    @extend .col-md-3;
+    @extend .col-sm-3;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+
+    img {@extend .img-full}
+  }
+
+}
+
 #region-noticia {
   .region-inner {
     @extend .col-lg-8;
@@ -187,5 +203,6 @@ NOTICIAS index show
       @extend .img-full; @extend .m-bottom-s;
     }
   }
-
 }
+
+

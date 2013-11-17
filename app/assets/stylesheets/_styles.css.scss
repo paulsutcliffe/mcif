@@ -9,16 +9,22 @@
       & > li {
         & > a,
         & > span {text-transform: uppercase; padding: 10px 25px; @include inline-block; font-weight: bold}
-        & > a:hover,
-        & > span {color: $gray}
+        & > a:hover, & > a:focus,
+        & > span {color: $gray; border-bottom: 4px solid $green}
         &.last {
           a {padding-right: 0}
         }  
       }
+
+
     }
   }
   .bevel {border-bottom: 1px solid $bevel-black-bottom; border-top: 1px solid $bevel-black-top;}
 }
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {@extend .menu-hover}
+
 
 .backLava  {width: 100%; border-bottom: 4px solid $green; padding-bottom: 42px !important}
 @media (max-width: 767px) {
@@ -37,7 +43,7 @@
 
 @media (min-width: 1280px) {
   .navbar-default .navbar-collapse .navbar-nav > li > a, 
-  .navbar-default .navbar-collapse .navbar-nav > li > span {padding: 10px 45px}
+  .navbar-default .navbar-collapse .navbar-nav > li > span {padding: 10px 25px}
 }
 
 /*.backLava  {top: 100% !important; width: 100%; height: 4px !important; content: ""; background: $green}*/
@@ -53,15 +59,31 @@
 }
 
 #ticket {background: $green;
+    .container {padding-bottom: 10px}
+
   .region {
     overflow: hidden;
     .region-inner {width: 100%}
+    li {margin-right: 20px}
+    a {margin-right: 0}
+    
+    i.icon {position: relative; top: 6px; margin-right: 5px}
+
   }
 }
 
 #logo {position: relative; z-index: 200; margin-top: 20px; margin-bottom: 20px;
   @extend .clearfix;
   a {padding: 0}
+}
+
+.tickercontainer {border: 0; width: 100%; background: none;
+  .mask {
+    width: 100%;
+    li { background: none; font-weight: 300; font-size: $legible;
+      a {color: black; font-weight: 300; font-size: $legible}
+    } 
+  }
 }
 
 .carousel-control {
@@ -72,7 +94,6 @@
   &.right {right: -15px; span {right: 0 !important}}
   span {color: white; background: $gray; width: auto !important; padding: 10px; margin-top: -20px !important}
 }
-
 
 
 #carousel-generic {
@@ -99,12 +120,13 @@ $icons-sprite-dimensions: true;
 @include all-icons-sprites;
 
 
-i {
+i.icon {
   display: block; margin-right: 10px; float: left;
   &.person_chart {@include icons-sprite(person_chart)}
   &.e_mail_marketing {@include icons-sprite(e_mail_marketing)}
   &.facebook_2 {@include icons-sprite(facebook_2)}
   &.linkedin_2 {@include icons-sprite(linkedin_2)}
+  &.minisearch {@include icons-sprite(minisearch)}
 }
 
 #main-header {
@@ -144,3 +166,13 @@ i {
 }
 
 .icon {@include inline-block}
+
+#carousel-noticias-list {
+  .carousel-indicators {
+    position: relative; bottom: auto; left: auto; margin: 0; width: auto;
+    li {
+      text-indent: 0; width: auto; height: auto;
+    }
+  }
+
+}

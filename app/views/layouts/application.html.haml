@@ -13,10 +13,14 @@
     .container
       .region
         .region-inner
-          - @ticker_noticias.each do |noticia|
-            = noticia.tipo
-            = link_to noticia.titulo, noticia
-            = noticia.fecha
+          %ul#ticker01
+            - @ticker_noticias.each do |noticia|
+              %li
+                %i.icon.minisearch
+                = noticia.tipo + ': '
+                = link_to noticia.titulo, noticia
+                %i
+                  = noticia.fecha
 
   #content
     = yield

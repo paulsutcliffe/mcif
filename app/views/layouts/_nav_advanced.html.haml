@@ -11,20 +11,35 @@
   / Collect the nav links, forms, and other content for toggling
   .collapse.navbar-collapse.navbar-ex1-collapse
     %ul.nav.navbar-nav.navbar-right
-      = menu_li('Inicio', 'inicio', root_path)
 
-      = menu_li("Nosotros", 'nosotros', miembros_path)
-      = menu_li("Servicios", 'servicios', servicios_path)
-      = menu_li("Noticias MCIF", 'noticias', noticias_mcif_path)
-      =# menu_li("Noticias Recomendadas", 'noticias', noticias_recomendadas_path)
-      =# menu_li("Pulicaciones MCIF", 'noticias', publicaciones_mcif_path)
-      =# menu_li("Pulicaciones Recomendadas", 'noticias', publicaciones_recomendadas_path)
+      %li= link_to "Inicio", root_path
+
+      %li= link_to "Nosotros", miembros_path
+
+      %li= link_to "Servicios", servicios_path
+
+
+
+      %li.dropdown
+        = link_to "Noticias MCIF", '', class: 'dropdown-toggle', :"data-toggle" => 'dropdown'
+        %ul.dropdown-menu
+          %li= link_to "Noticias MCIF", noticias_mcif_path
+          %li= link_to "Noticias Recomendadas", noticias_recomendadas_path
+      %li.dropdown
+        = link_to 'Publicaciones', '', class: 'dropdown-toggle', :"data-toggle" => 'dropdown'
+        %ul.dropdown-menu
+          %li= link_to "Pulicaciones MCIF", publicaciones_mcif_path
+          %li= link_to "Pulicaciones Recomendadas", publicaciones_recomendadas_path
+
       - if current_admin
         %li= link_to "Mensajes", contactos_path
       - else
         %li= link_to "Contáctenos", new_contacto_path
+
       - if current_admin
         %li= link_to "Cerrar Sesión", destroy_admin_session_path, :method => :delete
+
+
   .bevel
   / /.navbar-collapse
 
