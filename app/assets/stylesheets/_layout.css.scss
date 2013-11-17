@@ -239,4 +239,22 @@ NOTICIAS index show
   }
 }
 
+/*
+PROYECTOS index show
+================================== */
 
+#region-noticia-figure {
+  img {@extend .img-full}
+  @extend .m-bottom-m;
+}
+
+#region-noticia-detail {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+  }
+}

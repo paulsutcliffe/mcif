@@ -1,18 +1,15 @@
-%p#notice= notice
+#region-noticia.container
+  .region
+    .region-title
+      %h2.title
+        Proyectos
+      %span.subtitle
+        = @proyecto.nombre
+  
+#region-noticia-figure
+  = image_tag @proyecto.foto_url(:full)
 
-%p
-  %b Nombre:
-  = @proyecto.nombre
-%p
-  %b Logo:
-  = @proyecto.logo
-%p
-  %b Foto:
-  = @proyecto.foto
-%p
-  %b Contenido:
-  = @proyecto.contenido
-
-= link_to 'Edit', edit_proyecto_path(@proyecto)
-\|
-= link_to 'Back', proyectos_path
+#region-noticia-detail.container
+  .region
+    .region-inner
+      = paragraph(@proyecto.contenido)
