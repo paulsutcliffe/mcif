@@ -159,6 +159,24 @@ MIEMBROS index show
 NOTICIAS index show
 ================================== */
 
+#region-noticias {
+  .region-title {
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-8;
+    @extend .col-xs-12;
+   
+    @extend .m-bottom-s;
+  }
+}
+
+#region-noticias-buscador {
+
+  form {
+    button {@extend .btn-tab; position: relative; top: -4px}
+  }
+}
+
 #carousel-noticias-list {
   .region-inner {
     @extend .col-lg-3;
@@ -169,8 +187,24 @@ NOTICIAS index show
     @extend .m-bottom-m; 
 
     img {@extend .img-full}
-  }
 
+
+  }
+    .carousel-indicators {
+      @extend .m-bottom-s-i;
+      h2.title {@extend .btn-tab;}
+    } 
+}
+
+#region-noticias-destacados {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+   
+    @extend .m-bottom-s;
+  }
 }
 
 #region-noticia {

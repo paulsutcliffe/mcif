@@ -5,10 +5,25 @@
 
 
 .m-bottom-s {margin-bottom: 20px}
+.m-bottom-s-i {margin-bottom: 20px !important}
 .m-bottom-m {margin-bottom: 40px}
 .m-bottom-l {margin-bottom: 60px}
 
 .default-button {@extend .btn; @extend .btn-default; text-transform: uppercase}
+
+
+
+.block-rounded {
+  border-radius: 7px; border: 1px solid $gray; padding: 15px;
+  margin-left: -15px; width: 100%;
+  .date {text-transform: uppercase}
+  h3 {text-transform: uppercase; margin: 10px 0;
+    a {color: black}
+  }
+  min-height: 150px;
+}
+.btn-tab {background: $gray; color: black; display: inline-block; *display: inline; *zoom: 1; vertical-align: top;
+padding: 7px 15px; font-weight: 300; font-size: $legible; text-transform: uppercase; border-radius: 7px}
 
 
 @mixin vertical-middle($height) {

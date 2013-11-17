@@ -1,25 +1,31 @@
 
+#region-noticias-buscador.container
+  .region
+    .region-inner
+      %form.form-horizontal
+        .form-group
+          %label.col-sm-1.control-label Buscador
+          .col-sm-5
+            %input{:type => 'text', class: 'form-control'}
+          .col-sm-2
+            %button.btn.btn-default
+              Enviar
+
 #region-noticias-destacados.container
   .region
     .region-title
-      %h2.title Destacadas
+      %h2.title.subtitle Destacados
       - @destacados.each do |destacado|
-
         .region-inner
-          = link_to destacado.titulo, destacado
-          = destacado.fecha
-          = link_to 'Leer más', destacado
-          - if current_admin
-            = link_to 'Editar', edit_noticia_path(destacado)
-            = link_to 'Eliminar', destacado, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
-
-
-
-#region-noticias-list.container
-  .region
-    .region-title
-
-
+          .block-rounded
+            %span.date
+              = destacado.fecha
+            %h3
+              = link_to destacado.titulo, destacado
+            = link_to 'Leer más', destacado, class: 'default-button'
+            - if current_admin
+              = link_to 'Editar', edit_noticia_path(destacado)
+              = link_to 'Eliminar', destacado, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
 
 
 #carousel-noticias-list.carousel.slide.container
