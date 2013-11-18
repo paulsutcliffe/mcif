@@ -6,4 +6,11 @@ $(document).ready(function() {
     btn_delete.appendTo($(this));
   })
 
+  $('.active-list li:eq(0)').addClass('active-list-item');
+  $('.active-list li a').click(function() {
+    $('.active-list li').removeClass('active-list-item');
+    $(this).parent().addClass('active-list-item');
+  });
+
+
 });

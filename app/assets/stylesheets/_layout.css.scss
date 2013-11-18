@@ -258,3 +258,52 @@ PROYECTOS index show
     @extend .m-bottom-m; 
   }
 }
+
+
+/*
+SERVICIOS index show
+================================== */
+
+#region-servicios {
+  .region-title {
+    @extend .col-lg-8;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+  }
+}
+
+#region-servicios-list {
+  h2.title { @extend .title-bottom; text-transform: uppercase; color: white}
+  p {color: white}
+  .region-inner.sidebar {
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+
+    ul {margin: 0; padding: 0}
+    li {
+      @extend .m-botton-m; overflow: hidden;
+      @include vertical-middle(50px);
+      h3 a {color: white}
+    }
+    img {@extend .img-left}
+  }
+
+  .region-inner {
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-8;
+    @extend .col-xs-12;
+
+    @extend .m-bottom-m; 
+  }
+
+
+  background: $sand;
+}

@@ -1,18 +1,38 @@
-%h1 Servicios
-- if current_admin
-  = link_to 'Nuevo Servicio', new_servicio_path
-%h2 Servicios
 
-.span12
-  .span4
-    - @servicios.each do |servicio|
-      = image_tag servicio.icono_url(:thumb)
-      = link_to servicio.nombre, servicio, remote: true
-      - if current_admin
-        = link_to 'Editar', edit_servicio_path(servicio)
-        = link_to 'Eliminar', servicio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
-      %br
+#region-servicios.container
+  .region
+    .region-title
+      %h2.title Servicios
+      .subtitle Subtítulo
+      = admin_create('Nuevo Servicio', new_servicio_path)
+
+      %p
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+
+
+#region-servicios-list
+  .container
+    .region
+      .region-inner.region-title.sidebar
+        %h2.title Servicios
+        %ul.active-list
+          - @servicios.each do |servicio|
+            %li
+              = image_tag servicio.icono_url(:thumb)
+              .vertical-wrapper
+                .vertical
+                  %h3.vertical-inner
+                    = link_to servicio.nombre, servicio, remote: true
+                  - if current_admin
+                    = link_to 'Editar', edit_servicio_path(servicio)
+                    = link_to 'Eliminar', servicio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
   
-  .span8
-    #servicio
-      = render @servicio
+      #servicio.region-inner.region-title
+        %ul.top-nav
+          %li
+            = link_to '>', ''
+          %li
+            = link_to '<', ''
+
+        = render @servicio

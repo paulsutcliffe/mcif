@@ -158,6 +158,17 @@ i.icon {
   }
 }
 
+.active-list .active-list-item a {text-decoration: underline !important}
+
+.top-nav {@include absolute(top, right, 0, 0); text-align: right;
+  li {float: right; margin-left: 1px;
+    a {background: white; color: $sand; width: 40px; height: 40px; display: block; text-align: center;
+      font-size: 25px; font-weight: 300;
+      &:hover {text-decoration: none; color: darken($sand, 10%)}
+    }
+  }
+}
+
 #servicios-region {
   @include vertical-middle(50px);
   img {@extend .img-left}
