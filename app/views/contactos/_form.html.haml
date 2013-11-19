@@ -1,4 +1,4 @@
-= form_for @contacto do |f|
+= form_for @contacto, html: { class: '' } do |f|
   - if @contacto.errors.any?
     #error_explanation
       %h2= "#{pluralize(@contacto.errors.count, "error")} prohibited this contacto from being saved:"
@@ -6,17 +6,19 @@
         - @contacto.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :nombre
-    = f.text_field :nombre
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :telefono
-    = f.text_field :telefono
-  .field
-    = f.label :mensaje
-    = f.text_field :mensaje
-  .actions
-    = f.submit 'Save'
+  .form-group-side
+    .form-group
+      = f.label :nombre, class: 'control-label'
+      = f.text_field :nombre, class: 'form-control'
+    .form-group
+      = f.label :email, class: 'control-label'
+      = f.text_field :email, class: 'form-control'
+    .form-group
+      = f.label :telefono, class: 'control-label'
+      = f.text_field :telefono, class: 'form-control'
+  .form-group-side
+    .form-group.form-textarea
+      = f.label :mensaje, class: 'control-label'
+      = f.text_area :mensaje, class: 'form-control'
+    .actions
+      = f.submit 'Save'

@@ -4,7 +4,7 @@ class CreateContactos < ActiveRecord::Migration
       t.string :nombre
       t.string :email
       t.string :telefono
-      t.string :mensaje
+      t.text :mensaje
 
       t.timestamps
     end

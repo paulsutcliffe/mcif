@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(:version => 20131028201357) do
     t.string   "nombre"
     t.string   "email"
     t.string   "telefono"
-    t.string   "mensaje"
+    t.text     "mensaje"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

@@ -307,3 +307,52 @@ SERVICIOS index show
 
   background: $sand;
 }
+
+/*
+CONTACTO new 
+================================== */
+
+#region-contacto-map {
+  iframe {@extend .iframe-full}
+}
+
+#region-contacto-form {
+  form {
+    @extend .col-lg-8;
+    @extend .col-md-8;
+    @extend .col-sm-8;
+    @extend .col-xs-12;
+
+    @extend .col-lg-offset-2;
+    @extend .col-md-offset-2;
+
+  }
+
+
+  .form-group-side {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+ 
+  }
+  textarea {height: 183px; min-height: 183px; resize: vertical} 
+  input[type="submit"] {@extend .default-button; float: right}
+  
+}
+
+#region-contacto-trabaja {
+  .region-inner {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+  }
+}
+
+#contactos {
+  .title.subtitle {margin-bottom: 30px}
+  form {
+    input[type="submit"] {@extend .default-button; float: right}
+  }
+}
