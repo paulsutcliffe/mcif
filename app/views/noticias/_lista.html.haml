@@ -27,38 +27,13 @@
               = link_to 'Editar', edit_noticia_path(destacado)
               = link_to 'Eliminar', destacado, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
 
-
 #carousel-noticias-list.carousel.slide.container
   .region
     .region-title
       %ol.carousel-indicators
-        - Noticia::TIPOS.each_with_index do |tipo, index|
-          - if index == 0
-            %li.active{:'data-target' => '#carousel-noticias-list', :'data-slide-to' => index}
-              %h2.title= tipo
-          - else
-            %li{:'data-target' => '#carousel-noticias-list', :'data-slide-to' => index}
-              %h2.title= tipo
+        - Noticia::TIPOS.each do |tipo|
+          %li
+            %h2.title= link_to tipo, "/#{params[:action]}-#{params[:subcategoria].pluralize(2).downcase}?tipo=#{tipo}", remote: true
 
-    .carousel-inner
-      - @noticias.each_slice(4).each_with_index do |noticia, index|
-        - if index == 0
-          .item.active
-            -  noticia.each do |noticia|
-              .region-inner
-                = image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
-                link_to noticia.titulo, noticia
-                = admin_controls('Editar', edit_noticia_path(noticia), 'down')       
-                - if current_admin
-                  = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
-        - else
-          .item
-            -  noticia.each do |noticia|
-              .region-inner
-                = image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
-                = link_to noticia.titulo, noticia
-                = admin_controls('Editar', edit_noticia_path(noticia), 'down')       
-                - if current_admin
-                  = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
-
-
+      #grid-noticias
+        = render @noticias

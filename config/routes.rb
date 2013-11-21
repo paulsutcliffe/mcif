@@ -5,6 +5,7 @@ Mcif::Application.routes.draw do
     devise_for :admins, :path => "cms", :path_names => { :sign_in => 'ingresar', :sign_out => 'salir', :password => 'secreto', :confirmation => 'verificacion', :unlock => 'desbloquear', :registration => 'registro', :sign_up => 'inscribirse' }
 
     resources :noticias
+
     match 'noticias-mcif' => 'noticias#noticias', :subcategoria => 'Mcif', :as => :noticias_mcif, via: :get
     match 'noticias-recomendadas' => 'noticias#noticias', :subcategoria => 'Recomendada', :as => :noticias_recomendadas, via: :get
     match 'publicaciones-mcif' => 'noticias#publicaciones', :subcategoria => 'Mcif', :as => :publicaciones_mcif, via: :get

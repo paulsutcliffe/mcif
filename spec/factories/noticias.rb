@@ -9,7 +9,7 @@ FactoryGirl.define do
     subtitulo { Faker::Lorem.sentence }
     contenido { Faker::Lorem.paragraph }
     link { Faker::Internet.url}
-    tipo "noticia"
+    tipo {['Boletín', 'Folletos', 'Declaraciones','Videos','Orientación','Reclamaciones'].sample}
     fecha "2013-10-23"
     categoria {['Noticia','Publicación'].sample}
     subcategoria {['Mcif','Recomendada'].sample}
