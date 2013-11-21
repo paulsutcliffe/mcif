@@ -7,7 +7,7 @@
       = admin_create('Nuevo Servicio', new_servicio_path)
 
       %p
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
         there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
 
 
@@ -27,12 +27,5 @@
                   - if current_admin
                     = link_to 'Editar', edit_servicio_path(servicio)
                     = link_to 'Eliminar', servicio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
-  
-      #servicio.region-inner.region-title
-        %ul.top-nav
-          %li
-            = link_to '>', ''
-          %li
-            = link_to '<', ''
 
         = render @servicio
