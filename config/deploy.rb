@@ -45,6 +45,7 @@ namespace :deploy do
         logger.info "Skipping asset pre-compilation because there were no asset changes"
       end
     end
+  end
 
   desc "creates database & database user"
 
