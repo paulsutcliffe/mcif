@@ -1,6 +1,10 @@
 .region-inner
-  = image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
-  = link_to noticia.titulo, noticia
+  .velo-wrapper
+    = image_tag noticia.imagenes.first.imagen_url(:thumb) if noticia.imagenes.first
+    .velo
+      %i.icon.search_big
+      %h3
+        = link_to noticia.titulo, noticia
   = admin_controls('Editar', edit_noticia_path(noticia), 'down')
   - if current_admin
     = link_to 'Eliminar', noticia, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }

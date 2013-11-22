@@ -132,6 +132,7 @@ i.icon {
 
   &.telephone {@include icons-sprite(telephone)}
   &.destination {@include icons-sprite(destination)}
+  &.search_big {@include icons-sprite(search_big)}
 }
 
 #main-header {
@@ -192,3 +193,18 @@ i.icon {
   }
 
 }
+
+#grid-noticias {
+  .region-inner {
+    .velo-wrapper {
+      position: relative; overflow: hidden;
+      .velo {@include absolute(left, top, 0, 100%); @include size(100%, 100%); background: rgba(255,255,255,0.8);}
+      .icon {@include absolute(left, bottom, 50%, 20px ); margin-left: -34px}
+      a { padding: 20px 10px 0; @include absolute(top, left, 0, 0); @include size(100%, 100%); display: block }
+      a {color: black}
+      &:hover {.velo {top: 0}}
+    }
+  }
+}
+
+.carousel-indicators a {color: black}
