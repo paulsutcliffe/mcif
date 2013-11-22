@@ -1,7 +1,7 @@
 #region-noticias.container
   .region
     .region-title
-      %h2.title= 'Publicaciones ' + (params[:subcategoria]).pluralize(@noticias)
+      %h2.title= page_title!('Publicaciones ' + (params[:subcategoria]).pluralize(@noticias))
       %span.subtitle
         Subtítulo
       = admin_create('Nueva Publicación', new_noticia_path)
