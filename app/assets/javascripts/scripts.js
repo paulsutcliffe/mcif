@@ -14,3 +14,32 @@ $(document).ready(function() {
 
 
 });
+
+
+  $(document).on('click', '#servicio .top-nav a', function() {
+    setTimeout(function() {    
+      leer_nombre();
+    }, 1000)
+
+  });
+  
+  function leer_nombre() {
+  
+    nombre = $('.ajax-title').text();
+    sidebar_links = $('.sidebar a');
+    console.log(nombre );
+    
+    sidebar_links.each(function() {
+       
+      if ($(this).text() == nombre) {
+        console.log($(this).text() + ' ' + nombre)
+      
+        $('.sidebar li').removeClass('active-list-item');
+        $(this).parents('li').addClass('active-list-item');
+        $(this).parents('li').css('background', 'transparent');
+      }
+    });
+    
+  }
+
+

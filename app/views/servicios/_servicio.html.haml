@@ -1,4 +1,4 @@
-#servicio.region-title
+#servicio
   %ul.top-nav
     - if @servicio.siguiente_servicio
       %li
@@ -6,8 +6,11 @@
     - if @servicio.servicio_anterior
       %li
         = link_to '<', @servicio.servicio_anterior, remote: true
-  %h2.title
-    = @servicio.nombre
+  %h2.title.ajax-title= @servicio.nombre
 
   %p
     = @servicio.contenido
+
+
+
+

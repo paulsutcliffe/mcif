@@ -28,5 +28,5 @@
                     = link_to 'Editar', edit_servicio_path(servicio)
                     = link_to 'Eliminar', servicio, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }
 
-      .region-inner
+      .region-inner.region-title
         = render @servicio
