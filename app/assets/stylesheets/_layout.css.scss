@@ -314,6 +314,29 @@ CONTACTO new
 
 #region-contacto-map {
   iframe {@extend .iframe-full}
+
+  #bloque-direccion {
+    padding: 0;
+    .region-inner {
+      @extend .col-lg-5;
+      @extend .col-md-5;
+      @extend .col-sm-5;
+      @extend .col-xs-12;
+
+      @extend .col-lg-offset-7;
+
+
+      ul {
+        @include absolute(left, top, 0, 40px); padding: 20px; width: 55%;
+        background: $green;
+        li {overflow: hidden; margin-bottom: 20px; font-size: 16px; font-weight: bold;
+          &.last {margin-bottom: 0}
+          span {width: 80%; float: right}
+        }
+      }
+    }
+
+  }
 }
 
 #region-contacto-form {

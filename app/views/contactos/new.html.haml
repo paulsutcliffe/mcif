@@ -5,9 +5,22 @@
       %span.subtitle Ubicación
 
 #region-contacto-map
+  #bloque-direccion.container
+    .region
+      .region-inner
+        %ul
+          %li
+            %i.icon.telephone 
+            %span
+              221 2808
+          %li.last
+            %i.icon.destination
+            %span
+              Calle Lord Nelson 124<br>
+              Miraflores, Lima.
+
   = render 'iframe'
    
-
 #region-contacto-form.container
   .region
     .region-title
@@ -15,7 +28,6 @@
 
     .region-inner
       = render 'form'
-
 
 #region-contacto-trabaja.container
   .region

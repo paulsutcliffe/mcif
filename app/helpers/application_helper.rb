@@ -62,12 +62,12 @@ module ApplicationHelper
           end  + '">
 
 
-        <a class="btn btn-edit btn-sm">' + edit_text + '</a> 
+        <a class="btn btn-edit btn-sm" href="' + edit_link + '">' + edit_text + '</a> 
        
 
         <div class="btn-group">
           <div class="dropdown">
-            <a class="btn btn-default btn-sm" role="button" data-toggle="dropdown" data-target="#" href="/page.html">
+            <a class="btn btn-default btn-sm" role="button" data-toggle="dropdown" data-target="#" href="' + edit_link + '">
                <span class="caret"></span>
             </a>
  
@@ -87,7 +87,7 @@ module ApplicationHelper
   def admin_create(create_text, create_link)
     if current_admin
       "#{'<div class="admin-control"> 
-        <a class="new" href="' + create_link +'">' + create_text + '</a>
+        <a class="btn btn-primary" href="' + create_link +'">' + create_text + '</a>
       </div>'}".html_safe
     end
   end
