@@ -3,7 +3,7 @@ class ServiciosController < InheritedResources::Base
 
   def index
     @servicios = Servicio.all
-    @servicio = Servicio.first
+    @servicio = params[:servicio_id] ? Servicio.find(params[:servicio_id]) : Servicio.first
   end
 
   def show

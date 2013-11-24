@@ -11,7 +11,7 @@
     .region-inner
       %i.icon.person_chart
       %p
-        Somos profesionales con experiencia en sistemas financieros y de gestión empresarial. 
+        Somos profesionales con experiencia en sistemas financieros y de gestión empresarial.
         Nos focalizamos en los mercados financieros. Brindamos asesoría en análisis económico, financiero y regulación.
 
 #servicios-region
@@ -27,7 +27,7 @@
           .vertical-wrapper
             .vertical
               %h3.vertical-inner
-                = servicio.nombre
+                = link_to servicio.nombre, servicios_path(servicio_id: servicio)
 
 
 - if current_admin
@@ -40,4 +40,4 @@
         Clientes
   = render 'clientes_carousel'
 
- 
+
