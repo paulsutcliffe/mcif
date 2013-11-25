@@ -1,0 +1,6 @@
+= form_tag resultado_de_busqueda_path, :method => 'get', html: { class: 'form-horizontal'} do
+  .form-group
+    .col-sm-5
+      = text_field_tag :busqueda, params[:busqueda], :id => 'nombre_de_producto', class: 'form-control'
+    .col-sm-2
+      = submit_tag 'BUSCAR', :name => nil, class: 'btn btn-default'

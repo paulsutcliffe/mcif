@@ -16,7 +16,12 @@ class Noticia < ActiveRecord::Base
 
   TIPOS = ['Boletín', 'Folletos', 'Declaraciones','Videos','Orientación','Reclamaciones']
   CATEGORIAS = ['Noticia', 'Publicación']
-  SUBCATEGORIAS = ['Mcif', 'Recomendadas']
+  SUBCATEGORIAS = ['Mcif', 'Recomendada']
 
   friendly_id :titulo, use: :slugged
+
+  def self.busqueda(busqueda)
+    condicion_de_busqueda = "%" + busqueda + "%"
+    find(:all, :conditions => ['titulo LIKE ? OR contenido LIKE ?', condicion_de_busqueda, condicion_de_busqueda])
+  end
 end

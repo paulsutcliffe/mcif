@@ -1,0 +1,19 @@
+#region-noticias.container
+  .region
+    .region-title
+      %h2.title= page_title!('Buscando en Noticias')
+      %span.subtitle
+        = params[:busqueda]
+
+#region-noticias-buscador.container
+  .region
+    .region-inner
+      = render('buscador')
+
+#carousel-noticias-list.carousel.slide.container
+  .region
+    .region-title
+      #grid-noticias
+        = render @noticias
+
+  = link_to 'Regresar', 'javascript:history.back(-1)', class: 'default-button'
