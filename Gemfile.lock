@@ -217,8 +217,6 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
-    unicorn-worker-killer (0.4.2)
-      unicorn (~> 4)
     warden (1.2.3)
       rack (>= 1.0)
     websocket (1.0.7)
@@ -257,5 +255,4 @@ DEPENDENCIES
   tinymce-rails (= 3.5.8)
   uglifier (>= 1.0.3)
   unicorn
-  unicorn-worker-killer
   will_paginate
