@@ -17,14 +17,7 @@
       = link_to content_tag(:i, '', class: 'facebook_2'), 'http://www.facebook.com/sharer.php?u=' + request.original_url
       = link_to content_tag(:i, '', class: 'linkedin_2'), 'http://www.linkedin.com/shareArticle?mini=true&url=' + request.original_url + '&title=' + @noticia.titulo + '&summary=' + @noticia.slug + '&source=' + @noticia.link
 
-  = link_to 'Regresar', noticias_path, class: 'default-button'
+  = link_to 'Regresar', 'javascript:history.back(-1)', class: 'default-button'
 
 - if current_admin
   = link_to 'Editar', edit_noticia_path(@noticia)
-\
-
-
-
--#
-  %h1= @noticia.categoria + ' ' + @noticia.subcategoria
-
