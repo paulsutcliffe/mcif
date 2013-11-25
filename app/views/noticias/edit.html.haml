@@ -1,9 +1,23 @@
 = render 'scripts/tiny_mce'
 
-%h1 Editing noticia
+- content_for :javascript do
+  = javascript_include_tag 'nested_form.js'
 
-= render 'form'
+- page_title!('Editando noticia')
 
-= link_to 'Show', @noticia
-\|
-= link_to 'Back', noticias_path
+#region-noticias.container
+
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          noticia
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @noticia, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

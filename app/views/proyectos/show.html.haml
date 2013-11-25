@@ -1,15 +1,24 @@
-#region-noticia.container
+#region-proyectos.container
   .region
     .region-title
-      %h2.title
-        Proyectos
-      %span.subtitle
-        = @proyecto.nombre
-  
-#region-noticia-figure
-  = image_tag @proyecto.foto_url(:full)
+      %h1= page_title!('proyecto')
 
-#region-noticia-detail.container
   .region
-    .region-inner
-      = paragraph(@proyecto.contenido)
+    %p
+      %b Nombre:
+      = @proyecto.nombre
+    %p
+      %b Logo:
+      = @proyecto.logo
+    %p
+      %b Foto:
+      = @proyecto.foto
+    %p
+      %b Contenido:
+      = @proyecto.contenido
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_proyecto_path(@proyecto), class: 'btn btn-success'
+    = link_to 'Regresar', proyectos_path, class: 'btn btn-warning'

@@ -1,5 +1,17 @@
-%h1= page_title!('Cliente')
+- page_title!('Editando cliente')
 
-= render 'form'
+#region-clientes.container
 
-= link_to 'Back', clientes_path
+  .region
+    .region-title
+      %h1
+        Creando
+        %b
+          cliente
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

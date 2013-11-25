@@ -3,9 +3,20 @@
 - content_for :javascript do
   = javascript_include_tag 'nested_form.js'
 
+- page_title!('Editando noticia')
 
-%h1 New noticia
+#region-noticias.container
 
-= render 'form'
+  .region
+    .region-title
+      %h1
+        Creando
+        %b
+          noticia
 
-= link_to 'Back', noticias_path
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

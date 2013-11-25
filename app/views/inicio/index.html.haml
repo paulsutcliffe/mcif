@@ -30,14 +30,12 @@
                 = link_to servicio.nombre, servicios_path(servicio_id: servicio)
 
 
-- if current_admin
-  = link_to 'Nuevo Cliente', new_cliente_path
+
 
 #clientes-region.container
   .region
     .region-title
       %h2.title
         Clientes
+        = admin_create('Nuevo Cliente', new_cliente_path)
   = render 'clientes_carousel'
-
-

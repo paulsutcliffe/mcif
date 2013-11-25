@@ -41,7 +41,7 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 gem "nested_form"
 gem "rvm-capistrano"
 gem "haml"
-gem "haml-rails"
+gem "scaffold-bootstrap3"
 gem "will_paginate"
 gem "inherited_resources"
 gem "page_title_helper"

@@ -1,31 +1,38 @@
-= form_for @miembro, :html => { :multipart => true} do |f|
+= form_for @miembro, :html => { multipart: true, class: 'form-horizontal', role: 'form' } do |f|
   - if @miembro.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@miembro.errors.count, "error")} prohibited this miembro from being saved:"
+      %h2= "#{pluralize(@miembro.errors.count, "error")}"
       %ul
         - @miembro.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :nombre
-    = f.text_field :nombre
-  .field
-    = f.label :tipo
-    = f.select :tipo, Miembro::TIPOS.collect { |i| [i]}
-  .field
-    = f.label :fotografia
-    = f.file_field :fotografia
-  .field
-    = f.label :email
-    = f.text_field :email
-  .field
-    = f.label :linkedin
-    = f.text_field :linkedin
-  .field
-    = f.label :contenido
-    = f.text_area :contenido, class: 'tinymce'
-  .field
-    = f.label :puesto
-    = f.text_field :puesto
+  .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
+    = f.label :tipo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :tipo, class: 'form-control'
+  .form-group
+    = f.label :fotografia, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :fotografia, class: 'form-control'
+  .form-group
+    = f.label :email, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :email, class: 'form-control'
+  .form-group
+    = f.label :linkedin, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :linkedin, class: 'form-control'
+  .form-group
+    = f.label :contenido, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :contenido, class: 'tinymce'
+  .form-group
+    = f.label :puesto, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :puesto, class: 'form-control'
   .actions
-    = f.submit 'Save'
+    = f.submit 'Guardar', class: 'btn btn-default'

@@ -1,5 +1,19 @@
-%h1 New proyecto
+= render 'scripts/tiny_mce'
 
-= render 'form'
+- page_title!('Editando proyecto')
 
-= link_to 'Back', proyectos_path
+#region-proyectos.container
+
+  .region
+    .region-title
+      %h1
+        Creando
+        %b
+          proyecto
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

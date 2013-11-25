@@ -1,15 +1,21 @@
-%p#notice= notice
+#region-postulantes.container
+  .region
+    .region-title
+      %h1= page_title!('postulante')
 
-%p
-  %b Nombre:
-  = @postulante.nombre
-%p
-  %b Email:
-  = @postulante.email
-%p
-  %b Curriculum:
-  = @postulante.curriculum
+  .region
+    %p
+      %b Nombre:
+      = @postulante.nombre
+    %p
+      %b Email:
+      = @postulante.email
+    %p
+      %b Curriculum:
+      = @postulante.curriculum
 
-= link_to 'Edit', edit_postulante_path(@postulante)
-\|
-= link_to 'Back', postulantes_path
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_postulante_path(@postulante), class: 'btn btn-success'
+    = link_to 'Regresar', postulantes_path, class: 'btn btn-warning'

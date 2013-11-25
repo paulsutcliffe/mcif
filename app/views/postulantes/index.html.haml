@@ -1,23 +1,30 @@
-%h1 Listing postulantes
+#region-postulantes.container
 
-%table
-  %tr
-    %th Nombre
-    %th Email
-    %th Curriculum
-    %th
-    %th
-    %th
+  .region
+    .region-title
+      %h1= page_title!('Listando postulantes')
 
-  - @postulantes.each do |postulante|
-    %tr
-      %td= postulante.nombre
-      %td= postulante.email
-      %td= postulante.curriculum
-      %td= link_to 'Show', postulante
-      %td= link_to 'Edit', edit_postulante_path(postulante)
-      %td= link_to 'Destroy', postulante, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Postulante', new_postulante_path, class: 'btn btn-primary'
 
-%br
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Email
+            %th Curriculum
+            %th
+            %th
+            %th
 
-= link_to 'New Postulante', new_postulante_path
+          - @postulantes.each do |postulante|
+            %tr
+              %td= postulante.nombre
+              %td= postulante.email
+              %td= postulante.curriculum
+              %td= link_to 'Ver', postulante, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_postulante_path(postulante), class: 'btn btn-success'
+                %td= link_to 'Eliminar', postulante, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

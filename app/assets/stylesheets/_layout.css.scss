@@ -20,7 +20,7 @@
     @extend .col-lg-10;
     @extend .col-md-10;
     @extend .col-sm-12;
-    @extend .col-xs-12;  
+    @extend .col-xs-12;
   }
 }
 
@@ -33,7 +33,7 @@ HOME
     @extend .col-md-12;
     @extend .col-sm-12;
     @extend .col-xs-12;
-   
+
     @extend .col-lg-offset-3;
    /* @extend .col-md-offset-1;
     @extend .col-sm-offset-1;
@@ -50,7 +50,7 @@ HOME
     @extend .col-lg-4;
     @extend .col-md-6;
     @extend .col-sm-6;  /*980 x 1200*/
-    @extend .col-xs-12; /* 800x1200*/
+    @extend .col-xs-10; /* 800x1200*/
 
     img {margin-bottom: 0}
     @extend .m-bottom-m;
@@ -98,7 +98,7 @@ MIEMBROS index show
     @extend .col-md-12;
     @extend .col-sm-12;
     @extend .col-xs-12;
- 
+
   }
 }
 
@@ -110,7 +110,7 @@ MIEMBROS index show
     @extend .col-sm-6;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
   h2.title {text-align: center; @extend .title-bottom}
   h3 {a {color: black; text-transform: uppercase}}
@@ -129,7 +129,7 @@ MIEMBROS index show
     @extend .col-sm-6;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
 
   .region-inner.no-image {
@@ -138,7 +138,7 @@ MIEMBROS index show
     @extend .col-sm-12;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
 
   figure.region-inner {
@@ -147,7 +147,7 @@ MIEMBROS index show
     @extend .col-sm-6;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
   .puesto {@extend .m-bottom-s}
   .email {text-transform: uppercase; font-size: 20px; font-weight: 300; @extend .m-bottom-s}
@@ -165,7 +165,7 @@ NOTICIAS index show
     @extend .col-md-8;
     @extend .col-sm-8;
     @extend .col-xs-12;
-   
+
     @extend .m-bottom-s;
   }
 }
@@ -184,7 +184,7 @@ NOTICIAS index show
     @extend .col-sm-3;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
 
     img {@extend .img-full}
 
@@ -193,7 +193,7 @@ NOTICIAS index show
     .carousel-indicators {
       @extend .m-bottom-s-i;
       h2.title {@extend .btn-tab;}
-    } 
+    }
 }
 
 #region-noticias-destacados {
@@ -202,7 +202,7 @@ NOTICIAS index show
     @extend .col-md-6;
     @extend .col-sm-6;
     @extend .col-xs-12;
-   
+
     @extend .m-bottom-s;
   }
 }
@@ -214,7 +214,7 @@ NOTICIAS index show
     @extend .col-sm-6;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
 
   .region-inner.no-image {
@@ -223,7 +223,7 @@ NOTICIAS index show
     @extend .col-sm-12;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
 
   figure.region-inner {
@@ -232,7 +232,7 @@ NOTICIAS index show
     @extend .col-sm-6;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
     img {
       @extend .img-full; @extend .m-bottom-s;
     }
@@ -255,7 +255,7 @@ PROYECTOS index show
     @extend .col-sm-6;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
 }
 
@@ -271,7 +271,7 @@ SERVICIOS index show
     @extend .col-sm-6;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
 }
 
@@ -284,7 +284,7 @@ SERVICIOS index show
     @extend .col-sm-4;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
 
     ul {margin: 0; padding: 0}
     li {
@@ -301,7 +301,7 @@ SERVICIOS index show
     @extend .col-sm-8;
     @extend .col-xs-12;
 
-    @extend .m-bottom-m; 
+    @extend .m-bottom-m;
   }
 
 
@@ -309,7 +309,7 @@ SERVICIOS index show
 }
 
 /*
-CONTACTO new 
+CONTACTO new
 ================================== */
 
 #region-contacto-map {
@@ -357,11 +357,11 @@ CONTACTO new
     @extend .col-md-6;
     @extend .col-sm-6;
     @extend .col-xs-12;
- 
+
   }
-  textarea {height: 183px; min-height: 183px; resize: vertical} 
+  textarea {height: 183px; min-height: 183px; resize: vertical}
   input[type="submit"] {@extend .default-button; float: right}
-  
+
 }
 
 #region-contacto-trabaja {

@@ -1,38 +1,47 @@
-= nested_form_for @noticia, :html => { :multipart => true } do |f|
+= form_for @noticia, :html => { multipart: true, class: 'form-horizontal', role: 'form' } do |f|
   - if @noticia.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@noticia.errors.count, "error")} prohibited this noticia from being saved:"
+      %h2= "#{pluralize(@noticia.errors.count, "error")}"
       %ul
         - @noticia.errors.full_messages.each do |msg|
           %li= msg
 
-  .field
-    = f.label :titulo
-    = f.text_field :titulo
-  .field
-    = f.label :subtitulo
-    = f.text_field :subtitulo
-  .field
-    = f.label :contenido
-    = f.text_area :contenido, class: 'tinymce'
-  .field
-    = f.label :link
-    = f.text_field :link
-  .field
-    = f.label :tipo
-    = f.select :tipo, Noticia::TIPOS.collect { |i| [i]}
-  .field
-    = f.label :fecha
-    = f.date_select :fecha
-  .field
-    = f.label :categoria
-    = f.select :categoria, Noticia::CATEGORIAS.collect { |i| [i]}
-  .field
-    = f.label :subcategoria
-    = f.select :subcategoria, Noticia::SUBCATEGORIAS.collect { |i| [i]}
-  .field
-    = f.label :destacado
-    = f.check_box :destacado
+  .form-group
+    = f.label :titulo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :titulo, class: 'form-control'
+  .form-group
+    = f.label :subtitulo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :subtitulo, class: 'form-control'
+  .form-group
+    = f.label :contenido, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :contenido, class: 'tinymce'
+  .form-group
+    = f.label :link, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :link, class: 'form-control'
+  .form-group
+    = f.label :tipo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.select :tipo, Noticia::TIPOS.collect { |i| [i]}, class: 'form-control'
+  .form-group
+    = f.label :fecha, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.date_select :fecha, class: 'form-control'
+  .form-group
+    = f.label :categoria, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.select :categoria, Noticia::CATEGORIAS.collect { |i| [i]}, class: 'form-control'
+  .form-group
+    = f.label :subcategoria, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.select :subcategoria, Noticia::SUBCATEGORIAS.collect { |i| [i]}, class: 'form-control'
+  .form-group
+    = f.label :destacado, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.check_box :destacado, class: 'form-control'
 
   = f.fields_for :imagenes do |imagen_form|
     = imagen_form.file_field :imagen
@@ -45,4 +54,4 @@
   = f.link_to_add "Agregar video", :videos
 
   .actions
-    = f.submit 'Save'
+    = f.submit 'Guardar', class: 'btn btn-default'

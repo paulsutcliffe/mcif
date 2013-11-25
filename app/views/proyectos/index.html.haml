@@ -1,25 +1,32 @@
-%h1 Listing proyectos
+#region-proyectos.container
 
-%table
-  %tr
-    %th Nombre
-    %th Logo
-    %th Foto
-    %th Contenido
-    %th
-    %th
-    %th
+  .region
+    .region-title
+      %h1= page_title!('Listando proyectos')
 
-  - @proyectos.each do |proyecto|
-    %tr
-      %td= proyecto.nombre
-      %td= proyecto.logo
-      %td= proyecto.foto
-      %td= proyecto.contenido
-      %td= link_to 'Show', proyecto
-      %td= link_to 'Edit', edit_proyecto_path(proyecto)
-      %td= link_to 'Destroy', proyecto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Proyecto', new_proyecto_path, class: 'btn btn-primary'
 
-%br
+      .table-responsive
+        %table.table
+          %tr
+            %th Nombre
+            %th Logo
+            %th Foto
+            %th Contenido
+            %th
+            %th
+            %th
 
-= link_to 'New Proyecto', new_proyecto_path
+          - @proyectos.each do |proyecto|
+            %tr
+              %td= proyecto.nombre
+              %td= proyecto.logo
+              %td= proyecto.foto
+              %td= proyecto.contenido
+              %td= link_to 'Ver', proyecto, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_proyecto_path(proyecto), class: 'btn btn-success'
+                %td= link_to 'Eliminar', proyecto, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

@@ -1,7 +1,18 @@
-%h1 Editing postulante
+- page_title!('Editando postulante')
 
-= render 'form'
+#region-postulantes.container
 
-= link_to 'Show', @postulante
-\|
-= link_to 'Back', postulantes_path
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          postulante
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @postulante, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

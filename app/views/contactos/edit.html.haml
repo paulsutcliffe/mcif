@@ -1,7 +1,18 @@
-%h1 Editing contacto
+- page_title!('Editando contacto')
 
-= render 'form'
+#region-contactos.container
 
-= link_to 'Show', @contacto
-\|
-= link_to 'Back', contactos_path
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          contacto
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @contacto, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'

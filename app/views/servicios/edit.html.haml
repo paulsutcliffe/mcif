@@ -1,9 +1,20 @@
 = render 'scripts/tiny_mce'
 
-%h1 Editing servicio
+- page_title!('Editando servicio')
 
-= render 'form'
+#region-servicios.container
 
-= link_to 'Show', @servicio
-\|
-= link_to 'Back', servicios_path
+  .region
+    .region-title
+      %h1
+        Editando
+        %b
+          servicio
+
+  .region
+    = render 'form'
+
+  .region
+    .admin-controls
+      = link_to 'Ver', @servicio, class: 'btn btn-info'
+      = link_to 'Regresar', 'javascript:history.back(-1)', class: 'btn btn-warning'
