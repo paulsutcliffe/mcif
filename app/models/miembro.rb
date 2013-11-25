@@ -7,6 +7,6 @@ class Miembro < ActiveRecord::Base
   mount_uploader :fotografia, ImagenUploader
   scope :directivos, -> { where(tipo: 'Directorio') }
   scope :expertos, -> { where(tipo: 'Expertos') }
-  TIPOS = ['Directivos', 'Expertos']
+  TIPOS = ['Directorio', 'Expertos']
 
 end

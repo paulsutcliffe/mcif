@@ -16,7 +16,7 @@ class Noticia < ActiveRecord::Base
 
   TIPOS = ['Boletín', 'Folletos', 'Declaraciones','Videos','Orientación','Reclamaciones']
   CATEGORIAS = ['Noticia', 'Publicación']
-  SUBCATEGORIAS = ['Mcif', 'Recomendados']
+  SUBCATEGORIAS = ['Mcif', 'Recomendadas']
 
   friendly_id :titulo, use: :slugged
 end
