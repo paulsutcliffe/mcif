@@ -3,23 +3,23 @@
   .region
     .region-title
       %h2.title Nosotros
-      %span.subtitle 
+      %span.subtitle
         = @miembro.nombre
       %p.puesto= @miembro.puesto
       %p.email
         %i.icon.e_mail_marketing
         = @miembro.email
-    
+
 
     - if @miembro.fotografia_url
       %figure.region-inner
         = image_tag @miembro.fotografia_url(:regular)
-     
+
       .region-inner
-        = @miembro.contenido
+        = raw(@miembro.contenido)
     - else
       .region-inner.no-image
-        = @miembro.contenido
+        = raw(@miembro.contenido)
 
   = link_to 'Regresar', miembros_path, class: 'default-button'
 - if current_admin

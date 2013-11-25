@@ -2,11 +2,11 @@
   .region
     .region-title
       %h2.title= page_title! @noticia.titulo
-      %span.subtitle 
+      %span.subtitle
         = @noticia.subtitulo
 
     .region-inner
-      = @noticia.contenido
+      = raw(@noticia.contenido)
 
     %figure.region-inner
       - @noticia.imagenes.each do |imagen|
