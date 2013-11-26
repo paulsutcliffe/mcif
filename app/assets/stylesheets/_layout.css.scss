@@ -47,7 +47,7 @@ HOME
 #servicios-region {
   h2.title {text-align: center; @extend .title-bottom}
   .region-inner {
-    @extend .col-lg-4;
+    @extend .col-lg-6;
     @extend .col-md-6;
     @extend .col-sm-6;  /*980 x 1200*/
     @extend .col-xs-10; /* 800x1200*/

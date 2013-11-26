@@ -21,10 +21,11 @@
   }
   .bevel {border-bottom: 1px solid $bevel-black-bottom; border-top: 1px solid $bevel-black-top;}
 }
-
+.navbar-default .navbar-nav > li > a {color: $gray}
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {@extend .menu-hover}
 
+.navbar-default .navbar-nav .dropdown-menu li a:hover {background: $green}
 
 .backLava  {width: 100%; border-bottom: 4px solid $green; padding-bottom: 42px !important}
 @media (max-width: 767px) {
@@ -55,7 +56,9 @@
   .region-inner {min-height: 120px}
 }
 #main-footer {
-  background: $gray; min-height: 200px;
+  background: $gray; 
+  .container {padding-bottom: 0; position: relative; min-height: 200px;}
+  #footer-bottom {@include absolute(left, bottom, 0, 0)}
 }
 
 #ticket {background: $green;
@@ -102,6 +105,8 @@
   }
 }
 
+#servicios #content {margin-bottom: 40px}
+
 #servicios-region {
   background: $sand;
 }
@@ -126,7 +131,9 @@ i.icon {
   display: block; margin-right: 10px; float: left;
   &.person_chart {@include icons-sprite(person_chart)}
   &.e_mail_marketing {@include icons-sprite(e_mail_marketing)}
+  &.facebook {@include icons-sprite(facebook)}
   &.facebook_2 {@include icons-sprite(facebook_2)}
+  &.linkedin {@include icons-sprite(linkedin)}
   &.linkedin_2 {@include icons-sprite(linkedin_2)}
   &.minisearch {@include icons-sprite(minisearch)}
 
@@ -141,6 +148,11 @@ i.icon {
     display: block; margin-left: 10px;
     &.mail_small {/*@include icons-sprite(mail_small)*/}
   }
+  .social-links {
+    text-align: right; @include absolute(top, right, 5px, 20px); z-index: 200;
+    li, a {@include inline-block;
+    }
+  }
 }
 
 #main-footer {
@@ -150,9 +162,6 @@ i.icon {
   * {color: white}
 }
 
-#footer-bottom {
-  margin-top: 120px
-}
 
 .social-links {
   #main-header & {
