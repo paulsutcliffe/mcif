@@ -1,0 +1,7 @@
+%ul
+  %li link_to 'Inicio', root_path
+  %li link_to 'Nosotros' miembros_path
+  %li Servicios
+  %ul
+    - @menu_servicios.each do |servicio|
+      %li= link_to servicio.nombre, servicios_path

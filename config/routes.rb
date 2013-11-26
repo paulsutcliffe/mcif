@@ -19,7 +19,9 @@ Mcif::Application.routes.draw do
 
     resources :proyectos
 
-    resources :miembros
+    scope '/nosotros' do
+      resources :miembros
+    end
 
     resources :clientes
 
