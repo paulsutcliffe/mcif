@@ -1,4 +1,4 @@
-= form_for @noticia, :html => { multipart: true, class: 'form-horizontal', role: 'form' } do |f|
+= nested_form_for @noticia, :html => { multipart: true, class: 'form-horizontal', role: 'form' } do |f|
   - if @noticia.errors.any?
     #error_explanation
       %h2= "#{pluralize(@noticia.errors.count, "error")}"
