@@ -42,3 +42,7 @@ end
 6.times do
   FactoryGirl.create :video
 end
+
+4.times do
+  FactoryGirl.create :asociado
+end

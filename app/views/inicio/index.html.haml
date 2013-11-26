@@ -39,3 +39,14 @@
         Clientes
         = admin_create('Nuevo Cliente', new_cliente_path)
   = render 'clientes_carousel'
+
+
+#asociados-region.container
+  .region
+    .region-title
+      %h2.title
+        Asociados
+        = admin_create('Nuevo Asociado', new_asociado_path)
+    #grid-asociados
+      - @asociados.each do |asociado|
+        = link_to image_tag(asociado.imagen_url(:medium)), asociado.link

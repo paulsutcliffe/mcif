@@ -64,6 +64,20 @@ HOME
   padding-bottom: 80px;
 }
 
+#asociados-region {
+  h2.title {text-align: center; @extend .title-bottom}
+  padding-bottom: 80px;
+}
+
+#grid-asociados {
+  text-align: center;
+  float: none;
+  margin: 0 auto;
+  @extend .col-lg-12;
+  @extend .col-md-12;
+  @extend .col-sm-12;
+  @extend .col-xs-12;
+}
 
 #carousel-clientes {
   .item {
