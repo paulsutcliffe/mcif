@@ -9,6 +9,7 @@
       & > li {
         & > a,
         & > span {text-transform: uppercase; padding: 10px 25px; @include inline-block; font-weight: bold}
+        &:hover > a,
         & > a:hover, & > a:focus,
         & > span {color: $gray; border-bottom: 4px solid $green}
         &.last {
@@ -21,8 +22,17 @@
   }
   .bevel {border-bottom: 1px solid $bevel-black-bottom; border-top: 1px solid $bevel-black-top;}
 }
+
+.dropdown {
+  &:hover {
+    .dropdown-menu {display: block !important}
+  }
+}
+
 .navbar-default .navbar-nav > li > a {color: $gray}
-.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus,
+.navbar-default .navbar-nav > .open > a, 
+.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {@extend .menu-hover}
 
 .navbar-default .navbar-nav .dropdown-menu li a:hover {background: $green}
@@ -54,6 +64,7 @@
 #main-header {
   background: $black;
   .region-inner {min-height: 120px}
+  .social-links i {margin-left: 0; margin-right: 0}
 }
 #main-footer {
   background: $gray; 
@@ -220,3 +231,6 @@ i.icon {
 }
 
 .carousel-indicators a {color: black}
+
+
+
