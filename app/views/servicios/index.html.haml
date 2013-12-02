@@ -2,20 +2,17 @@
 #region-servicios.container
   .region
     .region-title
-      %h2.title= page_title!('Servicios')
-      .subtitle Subtítulo
+      %h2.title= page_title!(I18n.t 'servicios.servicios')
+      .subtitle= I18n.t 'servicios.subtitulo'
       = admin_create('Nuevo Servicio', new_servicio_path)
 
       %p
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-
-
+        = I18n.t 'servicios.resumen'
 #region-servicios-list
   .container
     .region
       .region-inner.region-title.sidebar
-        %h2.title Servicios
+        %h2.title= I18n.t 'servicios.titulo'
         %ul.active-list
           - @servicios.each do |servicio|
             %li

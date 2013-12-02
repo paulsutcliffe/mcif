@@ -8,7 +8,7 @@
   #region-noticias-destacados.container
     .region
       .region-title
-        %h2.title.subtitle Destacados
+        %h2.title.subtitle= I18n.t 'noticias.destacados'
         - @destacados.each do |destacado|
           .region-inner
             .block-rounded

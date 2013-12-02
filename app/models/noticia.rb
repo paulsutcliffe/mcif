@@ -20,6 +20,8 @@ class Noticia < ActiveRecord::Base
 
   friendly_id :titulo, use: :slugged
 
+  translates :titulo, :subtitulo, :contenido
+
   def self.busqueda(busqueda)
     condicion_de_busqueda = "%" + busqueda + "%"
     find(:all, :conditions => ['titulo LIKE ? OR contenido LIKE ?', condicion_de_busqueda, condicion_de_busqueda])

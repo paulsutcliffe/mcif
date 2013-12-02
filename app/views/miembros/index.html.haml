@@ -1,21 +1,17 @@
 #region-miembros.container
   .region
     .region-title
-      %h2.title= page_title!('Nosotros')
-      %span.subtitle Conozca al equipo
+      %h2.title= page_title!(I18n.t 'nosotros.nosotros')
+      %span.subtitle= I18n.t 'nosotros.miembros'
   
     .region-inner
       = admin_create('Nuevo Miembro', new_miembro_path)
 
       %p 
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
-        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+        = I18n.t 'nosotros.resumen'
 
       %p
-        A small river named Duden flows by their place and supplies it with the necessary regelialia. 
-        It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-        Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic 
-        life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+        = I18n.t 'nosotros.parrafo'
     %figure.region-inner
       = image_tag 'img-nosotros-index.jpg', class: 'img-full'
 
@@ -23,7 +19,7 @@
   .container
     .region
       .region-title
-        %h2.title Directorio
+        %h2.title= I18n.t 'nosotros.directorio'
       
       - @directivos.each do |directivo|
         .region-inner
@@ -36,7 +32,7 @@
 #region-miembros-expertos.container
   .region
     .region-title
-      %h2.title Expertos
+      %h2.title= I18n.t 'nosotros.expertos'
 
 
     - @expertos.each do |experto|

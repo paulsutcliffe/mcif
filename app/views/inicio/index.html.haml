@@ -11,15 +11,14 @@
     .region-inner
       %i.icon.person_chart
       %p
-        Somos profesionales con experiencia en sistemas financieros y de gestión empresarial.
-        Nos focalizamos en los mercados financieros. Brindamos asesoría en análisis económico, financiero y regulación.
+        = I18n.t 'inicio.resumen'
 
 #servicios-region
   .container
     .region
       .region-title
         %h2.title
-          Servicios
+          = I18n.t 'inicio.servicios'
     .region
       - @servicios.each do |servicio|
         .region-inner
@@ -36,17 +35,8 @@
   .region
     .region-title
       %h2.title
-        Clientes
+        = I18n.t 'inicio.clientes'
         = admin_create('Nuevo Cliente', new_cliente_path)
   = render 'clientes_carousel'
 
 
-#asociados-region.container
-  .region
-    .region-title
-      %h2.title
-        Asociados
-        = admin_create('Nuevo Asociado', new_asociado_path)
-    #grid-asociados
-      - @asociados.each do |asociado|
-        = link_to image_tag(asociado.imagen_url(:medium)), asociado.link

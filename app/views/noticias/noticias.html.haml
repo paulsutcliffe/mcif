@@ -1,14 +1,12 @@
 #region-noticias.container
   .region
     .region-title
-      %h2.title= page_title!('Noticias ' + (params[:subcategoria]).pluralize(@noticias))
+      %h2.title= page_title!((I18n.t 'noticias.titulo') + " " + (params[:subcategoria]).pluralize(@noticias))
       %span.subtitle
-        Subtítulo
+        = I18n.t 'noticias.subtitulo'
       = admin_create('Nueva Noticia', new_noticia_path)
       %p
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-
+        = I18n.t 'noticias.parrafo'
     .region-inner
 
 

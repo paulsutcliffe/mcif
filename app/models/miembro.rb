@@ -1,5 +1,5 @@
 class Miembro < ActiveRecord::Base
-  attr_accessible :contenido, :email, :fotografia, :linkedin, :nombre, :puesto, :tipo
+  attr_accessible :contenido, :email, :fotografia, :linkedin, :nombre, :puesto, :tipo, :profesion
 
   extend FriendlyId
 

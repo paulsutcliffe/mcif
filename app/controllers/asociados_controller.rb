@@ -1,13 +1,15 @@
 class AsociadosController < InheritedResources::Base
-  before_filter :authenticate_admin!
+  before_filter :authenticate_admin!, :except => [:index]
 
   def create
-    create! { root_path }
+    create! { asociados_path }
   end
+
   def update
-    update! { root_path }
+    update! { asociados_path }
   end
+
   def destroy
-    destroy! { root_path }
+    destroy! { asociados_path }
   end
 end

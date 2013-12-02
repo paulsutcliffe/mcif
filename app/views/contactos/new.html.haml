@@ -1,8 +1,8 @@
 #region-contacto-new.container
   .region
     .region-title
-      %h2.title= page_title!('Contáctenos')
-      %span.subtitle Ubicación
+      %h2.title= page_title!(I18n.t 'contactenos.titulo')
+      %span.subtitle= I18n.t 'contactenos.ubicacion'
 
 #region-contacto-map
   #bloque-direccion.container
@@ -24,7 +24,7 @@
 #region-contacto-form.container
   .region
     .region-title
-      %h2.title.subtitle Escríbanos
+      %h2.title.subtitle= I18n.t 'contactenos.escribanos'
 
     .region-inner
       = render 'form'
@@ -32,22 +32,16 @@
 #region-contacto-trabaja.container
   .region
     .region-inner.region-title
-      %h2.title.subtitle TRABAJA CON NOSOTROS
+      %h2.title.subtitle= I18n.t 'contactenos.trabaja'
       %p
-        Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
-        there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
-      
+        = I18n.t 'contactenos.resumen'
       %p
-        A small river named Duden flows by their place and supplies it with the necessary regelialia. 
-        It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
-      
+        = I18n.t 'contactenos.texto'
       %p
-        Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic 
-        life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. 
-        The Big Oxmox advised her not to do so, because there were thousands of bad Commas.
+        = I18n.t 'contactenos.parrafo'
 
     .region-inner.region-title
-      %h2.title.subtitle Envía tu CV
+      %h2.title.subtitle= I18n.t 'contactenos.envia'
 
 
       = render '/postulantes/form'

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131126051729) do
+ActiveRecord::Schema.define(:version => 20131202230102) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -79,7 +79,21 @@ ActiveRecord::Schema.define(:version => 20131126051729) do
     t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "profesion"
   end
+
+  create_table "noticia_translations", :force => true do |t|
+    t.integer  "noticia_id"
+    t.string   "locale",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.string   "titulo"
+    t.string   "subtitulo"
+    t.text     "contenido"
+  end
+
+  add_index "noticia_translations", ["locale"], :name => "index_noticia_translations_on_locale"
+  add_index "noticia_translations", ["noticia_id"], :name => "index_noticia_translations_on_noticia_id"
 
   create_table "noticias", :force => true do |t|
     t.string   "titulo"
@@ -113,6 +127,18 @@ ActiveRecord::Schema.define(:version => 20131126051729) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "servicio_translations", :force => true do |t|
+    t.integer  "servicio_id"
+    t.string   "locale",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "nombre"
+    t.text     "contenido"
+  end
+
+  add_index "servicio_translations", ["locale"], :name => "index_servicio_translations_on_locale"
+  add_index "servicio_translations", ["servicio_id"], :name => "index_servicio_translations_on_servicio_id"
 
   create_table "servicios", :force => true do |t|
     t.string   "icono"

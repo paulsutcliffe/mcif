@@ -38,6 +38,7 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 
 # To use debugger
 # gem 'debugger'
+gem 'globalize', '~> 3.0.0'
 gem "nested_form"
 gem "rvm-capistrano"
 gem "haml"

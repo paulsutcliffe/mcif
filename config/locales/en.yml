@@ -1,4 +1,9 @@
 en:
+  app:
+    name: MC&F
+  menu:
+    inicio: Home
+    nosotros: About Us
   date:
     abbr_day_names:
     - Sun
@@ -151,7 +156,7 @@ en:
         separator: .
         significant: false
         strip_insignificant_zeros: false
-        unit: $
+        unit:
     format:
       delimiter: ! ','
       precision: 3

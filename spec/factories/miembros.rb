@@ -9,5 +9,6 @@ FactoryGirl.define do
     linkedin { Faker::Internet.url}
     contenido { Faker::Lorem.paragraph}
     puesto { Faker::Company.suffix }
+    profesion { Faker::Company.bs }
   end
 end

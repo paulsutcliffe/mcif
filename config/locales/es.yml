@@ -1,6 +1,71 @@
 es:
   app:
     name: MC&F
+  menu:
+    inicio: Inicio
+    nosotros: Nosotros
+    asociados: Asociados
+    servicios: Servicios
+    noticias: Noticias
+    noticias_mcif: Noticias MCIF
+    noticias_recomendadas: Noticias Recomendadas
+    publicaciones: Publicaciones
+    publicaciones_mcif: Publicaciones MCIF
+    publicaciones_recomendadas: Publicaciones Recomendadas
+    mensajes: Mensajes
+    contactenos: Contáctenos
+    cerrar_sesion: Cerrar Sesión
+
+  inicio:
+    servicios: Servicios
+    resumen:  Somos profesionales con experiencia en sistemas financieros y de gestión empresarial.
+              Nos focalizamos en los mercados financieros. Brindamos asesoría en análisis económico, financiero y regulación.
+    clientes: Clientes
+  nosotros:
+    miembros: Conozca al equipo
+    nosotros: Nosotros
+    directorio: Directorio
+    expertos: Expertos
+    resumen: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+             there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. 
+    parrafo: A small river named Duden flows by their place and supplies it with the necessary regelialia. 
+             It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic 
+             life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+  asociados:
+    asociados: Asociados
+
+  servicios:
+    servicios: Servicios
+    subtitulo: Subtítulo
+    resumen: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+             there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+    titulo: Servicios
+  noticias:
+    titulo: Noticias 
+    subtitulo: Subtítulo
+    parrafo: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+             there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+    destacados: Destacados
+  publicaciones:
+    titulo: Publicaciones
+    subtitulo: Subtítulo
+    parrafo: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
+             there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+  contactenos:
+    titulo: Contáctenos
+    ubicacion: Ubicación
+    escribanos: Escríbanos
+    trabaja: TRABAJA CON NOSOTROS
+    resumen: Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, 
+             there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.
+    texto: A small river named Duden flows by their place and supplies it with the necessary regelialia. 
+           It is a paradisematic country, in which roasted parts of sentences fly into your mouth.
+    parrafo: Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic 
+             life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar. 
+             The Big Oxmox advised her not to do so, because there were thousands of bad Commas. 
+    envia: Envía tu CV
+
   date:
     abbr_day_names:
     - dom
