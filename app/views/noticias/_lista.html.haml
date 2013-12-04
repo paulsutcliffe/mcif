@@ -18,8 +18,8 @@
                 = link_to destacado.titulo, destacado
               = link_to 'Leer más', destacado, class: 'default-button'
               - if current_admin
-                = link_to 'Editar', edit_noticia_path(destacado)
-                = link_to 'Eliminar', destacado, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
+                = link_to 'Editar', edit_noticia_path(destacado), class: 'btn btn-success'
+                = link_to 'Eliminar', destacado, :method => :delete, :data => { :confirm => '¿Estas seguro?' }, class: 'btn btn-danger'
 
 #carousel-noticias-list.carousel.slide.container
   .region

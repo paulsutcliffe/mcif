@@ -30,8 +30,8 @@
 }
 
 .navbar-default .navbar-nav > li > a {color: $gray}
-.navbar-default .navbar-nav > .open > a, 
-.navbar-default .navbar-nav > .open > a:hover, 
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {@extend .menu-hover}
 
@@ -67,7 +67,7 @@
   .social-links i {margin-left: 0; margin-right: 0}
 }
 #main-footer {
-  background: $gray; 
+  background: $gray;
   .container {padding-bottom: 0; position: relative; min-height: 200px;}
   #footer-bottom {@include absolute(left, bottom, 0, 0)}
 }
@@ -144,6 +144,7 @@ i.icon {
   &.e_mail_marketing {@include icons-sprite(e_mail_marketing)}
   &.facebook {@include icons-sprite(facebook)}
   &.facebook_2 {@include icons-sprite(facebook_2)}
+  &.youtube {@include icons-sprite(youtube)}
   &.linkedin {@include icons-sprite(linkedin)}
   &.linkedin_2 {@include icons-sprite(linkedin_2)}
   &.minisearch {@include icons-sprite(minisearch)}
@@ -160,8 +161,9 @@ i.icon {
     &.mail_small {/*@include icons-sprite(mail_small)*/}
   }
   .social-links {
+    color: $gray;
     text-align: right; @include absolute(top, right, 5px, 20px); z-index: 200;
-    li, a {@include inline-block;
+    li, a {color: $gray; @include inline-block;
     }
   }
 }

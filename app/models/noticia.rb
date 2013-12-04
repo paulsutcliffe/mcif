@@ -1,7 +1,10 @@
 #coding: utf-8
 class Noticia < ActiveRecord::Base
   attr_accessible :categoria, :contenido, :destacado, :fecha, :link, :subtitulo, :tipo, :titulo, :subcategoria, :imagenes_attributes, :videos_attributes
+
   extend FriendlyId
+
+  friendly_id :titulo, use: :slugged
 
   has_many :charts
   has_many :videos
@@ -17,10 +20,6 @@ class Noticia < ActiveRecord::Base
   TIPOS = ['Boletín', 'Folletos', 'Declaraciones','Videos','Orientación','Reclamaciones']
   CATEGORIAS = ['Noticia', 'Publicación']
   SUBCATEGORIAS = ['Mcif', 'Recomendada']
-
-  friendly_id :titulo, use: :slugged
-
-  translates :titulo, :subtitulo, :contenido
 
   def self.busqueda(busqueda)
     condicion_de_busqueda = "%" + busqueda + "%"

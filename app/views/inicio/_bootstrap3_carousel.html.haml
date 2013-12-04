@@ -1,6 +1,8 @@
 
 #carousel-generic.carousel.slide
 
+  = admin_create('Nuevo Banner', new_slide_path)
+
   %ol.carousel-indicators
     - @slides.each_with_index do |slide, index|
       - if index == 0
@@ -13,16 +15,17 @@
       - if index == 0
         .item.active
           = image_tag slide.imagen_url(:full)
-          = admin_controls('Editar', edit_slide_path(slide), 'down')       
           - if current_admin
-            = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
+            = link_to 'Editar', edit_slide_path(slide), class: 'btn btn-success'
+            = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
       - else
         .item
           = image_tag slide.imagen_url(:full)
-       
-          = admin_controls('Editar', edit_slide_path(slide), 'down')       
+
+          = admin_controls('Editar', edit_slide_path(slide), 'down')
           - if current_admin
-            = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estas Seguro?' }
+            = link_to 'Editar', edit_slide_path(slide), class: 'btn btn-success'
+            = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
 
   -#
     = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-slide' => 'prev'

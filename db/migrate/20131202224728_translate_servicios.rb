@@ -1,12 +1,10 @@
 class TranslateServicios < ActiveRecord::Migration
   def self.up
     Servicio.create_translation_table!({
-      
       :nombre => :string,
-      :contenido => :text 
-
+      :contenido => :text
     }, {
-      :migrate_date => true
+      :migrate_data => true
     })
   end
 

@@ -3,11 +3,11 @@
     .region-title
       %h2.title= page_title!(I18n.t 'nosotros.nosotros')
       %span.subtitle= I18n.t 'nosotros.miembros'
-  
+
     .region-inner
       = admin_create('Nuevo Miembro', new_miembro_path)
 
-      %p 
+      %p
         = I18n.t 'nosotros.resumen'
 
       %p
@@ -20,14 +20,14 @@
     .region
       .region-title
         %h2.title= I18n.t 'nosotros.directorio'
-      
+
       - @directivos.each do |directivo|
         .region-inner
           %h3
             = link_to directivo.nombre, directivo
           - if current_admin
-            = link_to 'Editar', edit_miembro_path(directivo)
-            = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás seguro?' }
+            = link_to 'Editar', edit_miembro_path(directivo), class: 'btn btn-success'
+            = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás seguro?' }, class: 'btn btn-danger'
 
 #region-miembros-expertos.container
   .region
@@ -42,7 +42,7 @@
         %span.subtitle
           = experto.puesto
         - if current_admin
-          = link_to 'Editar', edit_miembro_path(experto)
-          = link_to 'Eliminar', experto, :method => :delete, :data => { :confirm => '¿Estas seguro?' }
+          = link_to 'Editar', edit_miembro_path(experto), class: 'btn btn-success'
+          = link_to 'Eliminar', experto, :method => :delete, :data => { :confirm => '¿Estas seguro?' }, class: 'btn btn-danger'
         %br
 

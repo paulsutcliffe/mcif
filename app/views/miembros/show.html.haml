@@ -23,6 +23,5 @@
         = raw(@miembro.contenido)
 
   = link_to 'Regresar', miembros_path, class: 'default-button'
-- if current_admin
-  = link_to 'Editar', edit_miembro_path(@miembro)
-  \|
+  - if current_admin
+    = link_to 'Editar', edit_miembro_path(@miembro), class: 'btn btn-success'

@@ -45,13 +45,20 @@
 
   = f.fields_for :imagenes do |imagen_form|
     = imagen_form.file_field :imagen
-    = imagen_form.link_to_remove "Eliminar imagen"
-  = f.link_to_add "Agregar imagen", :imagenes
+    %br
+    = imagen_form.link_to_remove "Eliminar imagen", class: 'btn btn-danger'
+    %br
+  %br
+  = f.link_to_add "Agregar imagen", :imagenes, class: 'btn btn-primary'
   %br
   = f.fields_for :videos do |video_form|
     = video_form.text_field :link
-    = video_form.link_to_remove "Eliminar video"
-  = f.link_to_add "Agregar video", :videos
+    %br
+    = video_form.link_to_remove "Eliminar video", class: 'btn btn-danger'
+    %br
+  %br
+  = f.link_to_add "Agregar video", :videos, class: 'btn btn-primary'
 
   .actions
+    %br
     = f.submit 'Guardar', class: 'btn btn-default'

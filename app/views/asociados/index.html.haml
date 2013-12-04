@@ -2,25 +2,15 @@
 
   .region
     .region-title
-      %h1= page_title!(I18n.t 'asociados.asociados')
+      %h2.title= page_title!(I18n.t 'asociados.asociados')
+      = admin_create('Nuevo Asociado', new_asociado_path)
 
+#region-asociados-list
+  .container
     .region
-      - if current_admin
-        .admin-control
-          = link_to 'Crear Asociado', new_asociado_path, class: 'btn btn-primary'
-
-      .table-responsive
-        %table.table
-          %tr
-            %th
-            %th
-            %th
-
-          - @asociados.each do |asociado|
-            %tr
-              %td= link_to image_tag(asociado.imagen_url(:medium)), asociado.link
-              - if current_admin
-                %td= link_to 'Editar', edit_asociado_path(asociado), class: 'btn btn-success'
-                %td= link_to 'Eliminar', asociado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-
-
+      .region-inner
+        - @asociados.each do |asociado|
+          = link_to image_tag(asociado.imagen_url(:medium)), asociado.link
+          - if current_admin
+            = link_to 'Editar', edit_asociado_path(asociado), class: 'btn btn-success'
+            = link_to 'Eliminar', asociado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

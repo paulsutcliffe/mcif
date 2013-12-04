@@ -19,5 +19,5 @@
 
   = link_to 'Regresar', 'javascript:history.back(-1)', class: 'default-button'
 
-- if current_admin
-  = link_to 'Editar', edit_noticia_path(@noticia)
+  - if current_admin
+    = link_to 'Editar', edit_noticia_path(@noticia), class: 'btn btn-success'

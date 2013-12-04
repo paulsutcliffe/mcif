@@ -40,10 +40,6 @@
       - else
         %li= link_to (I18n.t 'menu.contactenos'), new_contacto_path
 
-      - if current_admin
-        %li= link_to (I18n.t 'menu.cerrar_sesion'), destroy_admin_session_path, :method => :delete
-
-
   .bevel
   / /.navbar-collapse
 
