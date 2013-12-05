@@ -10,11 +10,17 @@
       %p.email
         %i.icon.e_mail_marketing
         = @miembro.email
+      %p.email
+        %i.icon.linkedin_2
+        = link_to 'Ver Perfil en Linkedin', @miembro.linkedin
 
 
     - if @miembro.fotografia_url
       %figure.region-inner
         = image_tag @miembro.fotografia_url(:regular)
+        - if current_admin
+          %br
+          = link_to 'Eliminar Foto', borrar_foto_miembro_path, class: 'btn btn-danger'
 
       .region-inner
         = raw(@miembro.contenido)
@@ -25,3 +31,4 @@
   = link_to 'Regresar', miembros_path, class: 'default-button'
   - if current_admin
     = link_to 'Editar', edit_miembro_path(@miembro), class: 'btn btn-success'
+

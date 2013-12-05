@@ -25,6 +25,8 @@
         .region-inner
           %h3
             = link_to directivo.nombre, directivo
+          %span.subtitle
+            = directivo.puesto
           - if current_admin
             = link_to 'Editar', edit_miembro_path(directivo), class: 'btn btn-success'
             = link_to 'Eliminar', directivo, :method => :delete, :data => { :confirm => '¿Estás seguro?' }, class: 'btn btn-danger'

@@ -1,6 +1,6 @@
 Mcif::Application.routes.draw do
 
-  scope '(:locale)', :locale => /#{I18n.available_locales.join("|")}/ do
+  scope '(:locale)', :locale => /es|en/ do
 
     resources :asociados
 
@@ -22,7 +22,11 @@ Mcif::Application.routes.draw do
     resources :proyectos
 
     scope '/nosotros' do
-      resources :miembros
+      resources :miembros do
+        member do
+          get 'borrar_foto'
+        end
+      end
     end
 
     resources :clientes

@@ -8,5 +8,6 @@ class Miembro < ActiveRecord::Base
   scope :directivos, -> { where(tipo: 'Directorio') }
   scope :expertos, -> { where(tipo: 'Expertos') }
   TIPOS = ['Directorio', 'Expertos']
+  default_scope order('nombre ASC')
 
 end

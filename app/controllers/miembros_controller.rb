@@ -4,4 +4,10 @@ class MiembrosController < InheritedResources::Base
     @directivos = Miembro.directivos
     @expertos = Miembro.expertos
   end
+  
+  def borrar_foto
+    @miembro = Miembro.find(params[:id])
+    @miembro.update_column(:fotografia, nil)
+    redirect_to action: 'show'
+  end
 end
