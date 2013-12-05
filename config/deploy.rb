@@ -1,5 +1,6 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
+require "auto_html/capistrano"
 
 set :rvm_ruby_string, '1.9.3'
 set :rvm_type, :user  # Don't use system-wide RVM
