@@ -2,7 +2,7 @@ class Servicio < ActiveRecord::Base
   attr_accessible :contenido, :icono, :nombre
   mount_uploader :icono, IconoUploader
 
-  #translates :nombre, :contenido
+  translates :nombre, :contenido
 
   def servicio_anterior
     self.class.first(:conditions => ["nombre < ?", nombre], :order => "nombre desc")

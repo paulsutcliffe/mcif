@@ -8,6 +8,9 @@
     .region-inner
       = raw(@noticia.contenido)
 
+      - @noticia.videos.each do |video|
+        = video.link_html
+
     %figure.region-inner
       - @noticia.imagenes.each do |imagen|
         = image_tag imagen.imagen_url(:regular)

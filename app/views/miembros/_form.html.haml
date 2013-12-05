@@ -19,6 +19,10 @@
     .col-sm-10
       = f.text_field :profesion, class: 'form-control'
   .form-group
+    = f.label :resumen, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :resumen, class: 'form-control'
+  .form-group
     = f.label :tipo, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.select :tipo, Miembro::TIPOS.collect {|i| [i]}, class: 'form-control'

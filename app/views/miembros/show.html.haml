@@ -7,13 +7,13 @@
         = @miembro.nombre
       %p.puesto= @miembro.puesto
       %p.profesion= @miembro.profesion
+      %p.resumen= @miembro.resumen
       %p.email
         %i.icon.e_mail_marketing
         = @miembro.email
       %p.email
         %i.icon.linkedin_2
-        = link_to 'Ver Perfil en Linkedin', @miembro.linkedin
-
+        = auto_link(@miembro.linkedin) { |link_text| "Ver Perfil en LinkedIn" }
 
     - if @miembro.fotografia_url
       %figure.region-inner

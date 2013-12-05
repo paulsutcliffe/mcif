@@ -10,5 +10,6 @@ FactoryGirl.define do
     contenido { Faker::Lorem.paragraph}
     puesto { Faker::Company.suffix }
     profesion { Faker::Company.bs }
+    resumen { Faker::Lorem.paragraph }
   end
 end

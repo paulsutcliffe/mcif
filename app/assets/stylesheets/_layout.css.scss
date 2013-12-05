@@ -164,7 +164,9 @@ MIEMBROS index show
     @extend .m-bottom-m;
   }
   .puesto {@extend .m-bottom-s}
-  .email {text-transform: uppercase; font-size: 20px; font-weight: 300; @extend .m-bottom-s}
+  .email {text-transform: uppercase; font-size: 20px; font-weight: 300; @extend .m-bottom-s;
+    a { color: $black }
+  }
   img {@extend .img-full}
 }
 
