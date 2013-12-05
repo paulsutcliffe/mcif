@@ -9,7 +9,7 @@
       = raw(@noticia.contenido)
 
       - @noticia.videos.each do |video|
-        = video.link_html
+        = link_to video.link, video.link, target: '_blank', class: 'btn btn-primary'
 
     %figure.region-inner
       - @noticia.imagenes.each do |imagen|
