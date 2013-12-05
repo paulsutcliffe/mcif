@@ -42,22 +42,20 @@
     = f.label :destacado, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.check_box :destacado, class: 'form-control'
-
-  = f.fields_for :imagenes do |imagen_form|
-    = imagen_form.file_field :imagen
-    %br
-    = imagen_form.link_to_remove "Eliminar imagen", class: 'btn btn-danger'
-    %br
-  %br
-  = f.link_to_add "Agregar imagen", :imagenes, class: 'btn btn-primary'
-  %br
-  = f.fields_for :videos do |video_form|
-    = video_form.text_field :link
-    %br
-    = video_form.link_to_remove "Eliminar video", class: 'btn btn-danger'
-    %br
-  %br
-  = f.link_to_add "Agregar video", :videos, class: 'btn btn-primary'
+  .form-group
+    = f.label 'Imágenes', class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.fields_for :imagenes do |imagen_form|
+        = imagen_form.file_field :imagen
+        = imagen_form.link_to_remove "Eliminar imagen", class: 'btn btn-danger control-label'
+      = f.link_to_add "Agregar imagen", :imagenes, class: 'btn btn-primary'
+  .form-group
+    = f.label 'Videos', class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.fields_for :videos do |video_form|
+        = video_form.text_field :link
+        = video_form.link_to_remove "Eliminar video", class: 'btn btn-danger'
+      = f.link_to_add "Agregar video", :videos, class: 'btn btn-primary'
 
   .actions
     %br
