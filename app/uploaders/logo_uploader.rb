@@ -33,8 +33,8 @@ class LogoUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-    process :convert_to_grayscale
     process resize_and_pad: [140, 140, "#ffffff", "Center"]
+    process :convert_to_grayscale
   end
 
   # Add a white list of extensions which are allowed to be uploaded.
@@ -46,7 +46,7 @@ class LogoUploader < CarrierWave::Uploader::Base
   def convert_to_grayscale
     manipulate! do |img|
       img.colorspace("Gray")
-      img.brightness_contrast("-30x0")
+      # img.brightness_contrast("-30x0")
       img = yield(img) if block_given?
       img
     end
