@@ -11,9 +11,11 @@
       %p.email
         %i.icon.e_mail_marketing
         = @miembro.email
-      %p.email
-        %i.icon.linkedin_2
-        = auto_link(@miembro.linkedin) { |link_text| "Ver Perfil en LinkedIn" }
+      - unless @miembro.linkedin.empty?
+        %p.email
+          %i.icon.linkedin_2
+          = link_to 'Ver Perfil de LinkedIn', @miembro.linkedin
+          =# auto_link(@miembro.linkedin) { |link_text| "Ver Perfil de LinkedIn" }
 
     - if @miembro.fotografia_url
       %figure.region-inner
