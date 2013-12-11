@@ -15,5 +15,5 @@
 //= require twitter/bootstrap
 //= require jquery.li-scroller.1.0.js
 //= require scripts.js
-//= require tinymce
-//= require contactos.js.coffee
+// require tinymce
+// require contactos.js.coffee
