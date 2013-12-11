@@ -1,10 +1,10 @@
 ActionMailer::Base.smtp_settings = {
-  :address              => "mail.laboralmedicalperu.com",
+  :address              => 'smtp.gmail.com',
   :port                 => 587,
-  :domin                => "laboralmedicalperu.com",
-  :user_name            => "info@laboralmedicalperu.com",
-  :password             => "Sx3ghmb?",
-  :authentucaton        => "plain",
-  :enable_starttls_auto => false
+  :domain               => 'kosmyka.com',
+  :user_name            => 'info@kosmyka.com',
+  :password             => 'chimpance99',
+  :authentication       => 'plain',
+  :enable_starttls_auto => true 
 }
 

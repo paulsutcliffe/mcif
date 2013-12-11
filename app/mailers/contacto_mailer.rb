@@ -1,13 +1,14 @@
 class ContactoMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "info@kosmyka.com"
   def mensaje_recibido(contacto)
     @contacto = contacto
-    mail(:to => "info@mcifperu.com", :subject => "Registered", :replay_to => contacto.email, :from => "info@mcifperu.com")
+    mail(:to => "info@mcifperu.com", :subject => "Mensajes desde la web", :replay_to => contacto.email, :from => "info@mcifperu.com")
   end
 
   def curriculum_recibido(postulante)
     @postulante = postulante
-    mail(:to => "info@mcifperu.com", :subject => "Registered", :replay_to => postulante.email, :from => "info@mcifperu.com")
+    attachments[File.basename(postulante.curriculum.path)] = postulante.curriculum.read
+    mail(:to => "info@kosmyka.com", :subject => "Curriculum de postulante", :replay_to => postulante.email, :from => "info@kosmyka.com")
   end
 
 end
