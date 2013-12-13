@@ -56,7 +56,13 @@
         = video_form.text_field :link, class: 'form-control pull-left'
         = video_form.link_to_remove "Eliminar video", class: 'btn btn-danger'
       = f.link_to_add "Agregar video", :videos, class: 'btn btn-primary'
-
+  .form-group
+    = f.label 'Charts', class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.fields_for :charts do |chart_form|
+        = chart_form.text_field :titulo, class: 'form-control pull-left'
+        = chart_form.link_to_remove "Eliminar chart", class: 'btn btn-danger'
+      = f.link_to_add "Agregar chart", :charts, class: 'btn btn-primary'
   .actions
     %br
     = f.submit 'Guardar', class: 'btn btn-default'
