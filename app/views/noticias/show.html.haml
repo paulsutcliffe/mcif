@@ -1,7 +1,5 @@
-- content_for :javascript do
-  = javascript_include_tag "//www.google.com/jsapi", "chartkick"
-  = yield :js_initialization
-= line_chart [{:name => "Series A", :data => 0.2},{:name => "Series B", :data => 0.6}]
+#region-chart.container
+  = render 'chart'
 
 #region-noticia.container
   .region
