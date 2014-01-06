@@ -355,6 +355,10 @@ CONTACTO new
   }
 }
 
+#map_canvas {
+  z-index: -1;
+}
+
 #region-contacto-form {
   form {
     @extend .col-lg-8;
