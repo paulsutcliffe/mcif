@@ -1,17 +1,28 @@
 #region-miembros.container
   .region
     .region-title
+      %h2.title= page_title!('MC&F')
+      %span.subtitle= I18n.t 'nosotros.historia'
+    .region-inner
+
+      %p
+        = I18n.t 'nosotros.resumen1'
+      %p
+        = I18n.t 'nosotros.resumen2'
+      %p
+        = I18n.t 'nosotros.resumen3'
+      %p
+        = I18n.t 'nosotros.resumen4'
+      %p
+        = I18n.t 'nosotros.resumen5'
+  .region
+    .region-title
       %h2.title= page_title!(I18n.t 'nosotros.nosotros')
       %span.subtitle= I18n.t 'nosotros.miembros'
 
     .region-inner
       = admin_create('Nuevo Miembro', new_miembro_path)
 
-      %p
-        = I18n.t 'nosotros.resumen'
-
-      %p
-        = I18n.t 'nosotros.parrafo'
     %figure.region-inner
       = image_tag 'img-nosotros-index.jpg', class: 'img-full'
 
