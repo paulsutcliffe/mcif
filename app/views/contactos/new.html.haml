@@ -16,15 +16,11 @@
           %li
             %i.icon.telephone
             %span
-              221 2808
+              = @datos_de_contacto.telefono
           %li.last
             %i.icon.destination
             %span
-              Camino Real 1121
-              %br
-              Dpto 302
-              %br
-              San Isidro, Lima.
+              = @datos_de_contacto.direccion
 
   = render 'iframe'
 
@@ -41,11 +37,7 @@
     .region-inner.region-title
       %h2.title.subtitle= I18n.t 'contactenos.trabaja'
       %p
-        = I18n.t 'contactenos.resumen'
-      %p
-        = I18n.t 'contactenos.texto'
-      %p
-        = I18n.t 'contactenos.parrafo'
+        = @datos_de_contacto.trabaja_con_nosotros
 
     .region-inner.region-title
       %h2.title.subtitle= I18n.t 'contactenos.envia'

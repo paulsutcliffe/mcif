@@ -3,7 +3,7 @@ class ContactosController < InheritedResources::Base
   def new
     @contacto = Contacto.new
     @postulante = Postulante.new
-
+    @datos_de_contacto = DatosDeContacto.first
   end
   def create
     create! do |success, failure|
@@ -20,4 +20,15 @@ class ContactosController < InheritedResources::Base
     end
   end
 
+  def editar_datos_de_contacto
+    @datos_de_contacto = DatosDeContacto.first
+  end
+
+  def update_datos_de_contacto
+    @datos_de_contacto = DatosDeContacto.first
+    @datos_de_contacto.update_attributes(params[:datos_de_contacto])
+    if @datos_de_contacto.save
+      redirect_to accion: 'index'
+    end
+  end
 end

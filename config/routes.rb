@@ -20,6 +20,10 @@ Mcif::Application.routes.draw do
 
     resources :contactos
 
+    get 'contactos/editar_datos_de_contacto'
+
+    put 'contactos/update_datos_de_contacto'
+
     resources :proyectos
 
     scope '/nosotros' do

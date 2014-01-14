@@ -1,3 +1,5 @@
+= render 'scripts/tiny_mce'
+
 = form_for @historia, url: miembros_update_historia_path, method: :put, html: { class: 'form-horizontal', role: 'form' } do |f|
   - if @historia.errors.any?
     #error_explanation

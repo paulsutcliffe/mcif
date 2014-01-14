@@ -6,7 +6,7 @@
     .region-inner
 
       %p
-        = @historia.contenido
+        = raw(@historia.contenido)
   .region
     - if current_admin
       = link_to 'Editar historia', miembros_editar_historia_path, class: 'btn btn-success'
