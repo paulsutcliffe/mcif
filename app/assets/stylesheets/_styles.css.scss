@@ -16,27 +16,25 @@
           a {padding-right: 0}
         }
       }
-
-
     }
   }
   .bevel {border-bottom: 1px solid $bevel-black-bottom; border-top: 1px solid $bevel-black-top;}
 }
-
+@media (min-width:768px){
 .dropdown {
   &:hover {
     .dropdown-menu {display: block !important}
   }
 }
+}
 
-.navbar-default .navbar-nav > li > a {color: $gray}
+.navbar-default .navbar-nav > li > a {color: $gray; text-align:center;}
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {@extend .menu-hover}
 
 .navbar-default .navbar-nav .dropdown-menu li a:hover {background: $green}
-
 .backLava  {width: 100%; border-bottom: 4px solid $green; padding-bottom: 42px !important}
 @media (max-width: 767px) {
 
@@ -46,8 +44,21 @@
   .navbar-default .navbar-collapse .navbar-nav > li > a:hover,
   .navbar-default .navbar-collapse .navbar-nav > li > span {color: white; text-shadow: 1px 1px 1px black}
   .backLava {border: 0; background: $green; padding-bottom: 0 !important}
+  #main-header .social-links{
+    right: 0px !important;
+    padding: 0px !important;
+    margin-bottom: 30px;
+  }
+
 }
+
+
 @media (max-width: 980px) {
+  #main-header{
+    .container{
+      width:100%;
+    }
+  }
   #logo a {float: none; margin: 0 auto; display: block; text-align: center}
   .navbar-default .navbar-collapse .navbar-nav {margin-top: 0}
 }
@@ -69,7 +80,9 @@
 #main-footer {
   background: $gray;
   .container {padding-bottom: 0; position: relative; min-height: 200px;}
-  #footer-bottom {@include absolute(left, bottom, 0, 0)}
+  #footer-bottom {@include absolute(left, bottom, 0, 0);
+  width:100%;
+  }
 }
 
 #ticket {background: $green;
@@ -163,7 +176,7 @@ i.icon {
   }
   .social-links {
     color: $gray;
-    text-align: right; @include absolute(top, right, 5px, 20px); z-index: 200;
+    text-align: center; @include absolute(top, right, 5px, 20px); z-index: 200;
     li, a {color: $gray; @include inline-block;
     }
   }
@@ -179,7 +192,6 @@ i.icon {
 
 .social-links {
   #main-header & {
-    float: right; text-align: right;
     li {@include inline-block}
   }
   #main-footer & {
@@ -239,3 +251,9 @@ i.icon {
 .region-title > h1 {
   margin-top: 20px;
 }
+
+b{
+color:white;
+}
+
+

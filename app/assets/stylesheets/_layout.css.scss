@@ -393,9 +393,38 @@ CONTACTO new
   }
 }
 
+
 #contactos {
   .title.subtitle {margin-bottom: 30px}
   form {
     input[type="submit"] {@extend .default-button; float: right}
   }
+}
+
+// Asociados
+#region-asociados.container{
+
+}
+
+
+#region-asociados-list{
+  .region-inner{
+    @extend .row;
+    .region-asociados{
+      @extend .col-md-4;
+      @extend .col-lg-4;
+      @extend .col-sm-4;
+      @extend .col-xs-12;
+      min-height: 390px;
+        .img-responsive{
+          margin:0 auto;
+        }
+    }
+  }
+}
+
+
+#ticket{
+  height: 37px;
+  overflow-y: hidden;
 }
