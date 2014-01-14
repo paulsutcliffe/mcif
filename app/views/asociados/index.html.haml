@@ -10,8 +10,10 @@
     .region
       .region-inner
         - @asociados.each do |asociado|
-          = link_to image_tag(asociado.imagen_url(:medium)), asociado.link
-          = asociado.descripcion
+          .region-asociados
+            = link_to image_tag(asociado.imagen_url(:medium), class: 'img-responsive'), asociado.link
+            %p
+              = asociado.descripcion
           - if current_admin
             = link_to 'Editar', edit_asociado_path(asociado), class: 'btn btn-success'
             = link_to 'Eliminar', asociado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
