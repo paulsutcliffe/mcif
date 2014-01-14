@@ -1,20 +1,15 @@
 #region-miembros.container
   .region
     .region-title
-      %h2.title= page_title!('MC&F')
-      %span.subtitle= I18n.t 'nosotros.historia'
+      %h2.title= page_title!(@historia.titulo)
+      %span.subtitle= @historia.subtitulo
     .region-inner
 
       %p
-        = I18n.t 'nosotros.resumen1'
-      %p
-        = I18n.t 'nosotros.resumen2'
-      %p
-        = I18n.t 'nosotros.resumen3'
-      %p
-        = I18n.t 'nosotros.resumen4'
-      %p
-        = I18n.t 'nosotros.resumen5'
+        = @historia.contenido
+  .region
+    - if current_admin
+      = link_to 'Editar historia', miembros_editar_historia_path, class: 'btn btn-success'
   .region
     .region-title
       %h2.title= page_title!(I18n.t 'nosotros.nosotros')

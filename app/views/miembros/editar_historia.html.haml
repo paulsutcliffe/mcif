@@ -1,0 +1,22 @@
+= form_for @historia, url: miembros_update_historia_path, method: :put, html: { class: 'form-horizontal', role: 'form' } do |f|
+  - if @historia.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@historia.errors.count, "error")}"
+      %ul
+        - @historia.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :titulo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :titulo, class: 'form-control'
+  .form-group
+    = f.label :subtitulo, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :subtitulo, class: 'form-control'
+  .form-group
+    = f.label :contenido, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_area :contenido, class: 'tinymce'
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-default'

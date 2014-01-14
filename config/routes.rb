@@ -14,6 +14,7 @@ Mcif::Application.routes.draw do
     match 'noticias-recomendadas' => 'noticias#noticias', :subcategoria => 'Recomendada', :as => :noticias_recomendadas, via: :get
     match 'publicaciones-mcif' => 'noticias#publicaciones', :subcategoria => 'Mcif', :as => :publicaciones_mcif, via: :get
     match 'publicaciones-recomendadas' => 'noticias#publicaciones', :subcategoria => 'Recomendada', :as => :publicaciones_recomendadas, via: :get
+    
 
     resources :postulantes
 
@@ -22,6 +23,8 @@ Mcif::Application.routes.draw do
     resources :proyectos
 
     scope '/nosotros' do
+      get 'miembros/editar_historia'
+      put 'miembros/update_historia'
       resources :miembros do
         member do
           get 'borrar_foto'
