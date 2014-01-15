@@ -39,6 +39,7 @@ gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
 # To use debugger
 # gem 'debugger'
 #gem "auto_html"
+gem 'acts_as_list'
 gem 'chartkick'
 gem 'rinku', '~> 1.5.1', :require => 'rails_rinku'
 gem 'globalize', '~> 3.0.0'
