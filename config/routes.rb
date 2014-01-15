@@ -18,11 +18,11 @@ Mcif::Application.routes.draw do
 
     resources :postulantes
 
-    resources :contactos
-
     get 'contactos/editar_datos_de_contacto'
 
     put 'contactos/update_datos_de_contacto'
+
+    resources :contactos
 
     resources :proyectos
 

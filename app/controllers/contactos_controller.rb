@@ -28,7 +28,7 @@ class ContactosController < InheritedResources::Base
     @datos_de_contacto = DatosDeContacto.first
     @datos_de_contacto.update_attributes(params[:datos_de_contacto])
     if @datos_de_contacto.save
-      redirect_to accion: 'index'
+      redirect_to action: 'index'
     end
   end
 end
