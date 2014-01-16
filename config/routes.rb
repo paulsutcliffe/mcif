@@ -40,6 +40,10 @@ Mcif::Application.routes.draw do
 
     resources :clientes
 
+    get 'servicios/editar_texto_de_servicio'
+
+    put 'servicios/update_texto_de_servicio'
+
     resources :servicios
 
     resources :slides

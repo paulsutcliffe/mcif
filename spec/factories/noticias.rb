@@ -7,6 +7,7 @@ FactoryGirl.define do
   factory :noticia do
     titulo { Faker::Lorem.sentence }
     subtitulo { Faker::Lorem.sentence }
+    comentario { Faker::Lorem.paragraph }
     contenido { Faker::Lorem.paragraph }
     link { Faker::Internet.url}
     tipo {['Boletín', 'Folletos', 'Declaraciones','Videos','Orientación','Reclamaciones'].sample}

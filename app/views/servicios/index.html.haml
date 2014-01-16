@@ -3,11 +3,13 @@
   .region
     .region-title
       %h2.title= page_title!(I18n.t 'servicios.servicios')
-      .subtitle= I18n.t 'servicios.subtitulo'
+      .subtitle= @texto_de_servicio.subtitulo
       = admin_create('Nuevo Servicio', new_servicio_path)
+      -if current_admin
+        = link_to 'Editar datos de servicio', servicios_editar_texto_de_servicio_path, class: 'btn btn-success'
 
       %p
-        = I18n.t 'servicios.resumen'
+        = raw(@texto_de_servicio.contenido)
 #region-servicios-list
   .container
     .region

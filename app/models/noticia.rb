@@ -1,6 +1,6 @@
 #coding: utf-8
 class Noticia < ActiveRecord::Base
-  attr_accessible :categoria, :contenido, :destacado, :fecha, :link, :subtitulo, :tipo, :titulo, :subcategoria, :imagenes_attributes, :videos_attributes, :charts_attributes
+  attr_accessible :categoria, :contenido, :destacado, :fecha, :link, :subtitulo, :tipo, :titulo, :subcategoria, :imagenes_attributes, :videos_attributes, :charts_attributes, :comentario
 
   extend FriendlyId
 

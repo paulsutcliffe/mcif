@@ -9,6 +9,8 @@
         = @noticia.subtitulo
 
     .region-inner
+      = raw(@noticia.comentario)
+      %br
       = raw(@noticia.contenido)
 
       - @noticia.videos.each do |video|
