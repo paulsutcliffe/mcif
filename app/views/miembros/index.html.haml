@@ -1,3 +1,6 @@
+- content_for :javascript do
+  = javascript_include_tag 'historia.js'
+
 #region-miembros.container
   .region
     .region-title
@@ -5,8 +8,11 @@
       %span.subtitle= @historia.subtitulo
     .region-inner
 
-      %p
+      %p.historia
         = raw(@historia.contenido)
+      %a#toggle.glyphicon.glyphicon-chevron-down
+        %span
+          Ver m&aacute;s
   .region
     - if current_admin
       = link_to 'Editar historia', miembros_editar_historia_path, class: 'btn btn-success'

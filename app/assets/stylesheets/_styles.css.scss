@@ -275,3 +275,17 @@ color:white;
 .pull-left{
 margin: 5px 20px 0px 0px;
 }
+
+#region-miembros #toggle{
+cursor:pointer !important;
+text-decoration: none; 
+span{
+    font-family: 'Lato';
+  }
+}
+
+#region-miembros .historia{
+height: 140px;
+overflow: hidden;
+}
+

@@ -411,9 +411,9 @@ CONTACTO new
   .region-inner{
     @extend .row;
     .region-asociados{
-      @extend .col-md-4;
-      @extend .col-lg-4;
-      @extend .col-sm-4;
+      @extend .col-md-8;
+      @extend .col-lg-8;
+      @extend .col-sm-8;
       @extend .col-xs-12;
       min-height: 390px;
         .img-responsive{
