@@ -36,4 +36,8 @@ class ServiciosController < InheritedResources::Base
   def update
     update! { servicios_path }
   end
+
+  def destroy
+    destroy! { servicios_path }
+  end
 end

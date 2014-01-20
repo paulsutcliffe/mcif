@@ -21,7 +21,7 @@
   .form-group
     = f.label :comentario, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_area :contenido, class: 'tinymce'
+      = f.text_area :comentario, class: 'tinymce'
   .form-group
     = f.label :link, class: 'col-sm-2 control-label'
     .col-sm-10
@@ -63,10 +63,12 @@
   .form-group
     = f.label 'Charts', class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.fields_for :charts do |chart_form|
-        = chart_form.text_field :titulo, class: 'form-control pull-left'
-        = chart_form.link_to_remove "Eliminar chart", class: 'btn btn-danger'
-      = f.link_to_add "Agregar chart", :charts, class: 'btn btn-primary'
+      = f.fields_for :puntos do |punto_form|
+        = punto_form.text_field :leyenda, placeholder: "leyenda", class: 'form-control pull-left'
+        = punto_form.text_field :x, placeholder: "x", class: 'form-control pull-left'
+        = punto_form.text_field :y, placeholder: "y", class: 'form-control pull-left'
+        = punto_form.link_to_remove "Eliminar punto", class: 'btn btn-danger'
+      = f.link_to_add "Agregar punto", :puntos, class: 'btn btn-primary'
   .actions
     %br
     = f.submit 'Guardar', class: 'btn btn-default'

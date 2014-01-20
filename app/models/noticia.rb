@@ -1,17 +1,17 @@
 #coding: utf-8
 class Noticia < ActiveRecord::Base
-  attr_accessible :categoria, :contenido, :destacado, :fecha, :link, :subtitulo, :tipo, :titulo, :subcategoria, :imagenes_attributes, :videos_attributes, :charts_attributes, :comentario
+  attr_accessible :categoria, :contenido, :destacado, :fecha, :link, :subtitulo, :tipo, :titulo, :subcategoria, :imagenes_attributes, :videos_attributes, :puntos_attributes, :comentario
 
   extend FriendlyId
 
   friendly_id :titulo, use: :slugged
 
-  has_many :charts
+  has_many :puntos
   has_many :videos
   has_many :imagenes
   accepts_nested_attributes_for :imagenes, :allow_destroy => true
   accepts_nested_attributes_for :videos, :allow_destroy => true
-  accepts_nested_attributes_for :charts, :allow_destroy => true
+  accepts_nested_attributes_for :puntos, :allow_destroy => true
 
   scope :destacados, -> { where("destacado = ?", true)}
   scope :clase, ->(subcategoria) { where("subcategoria = ?", subcategoria) }

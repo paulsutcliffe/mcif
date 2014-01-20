@@ -31,4 +31,8 @@ class NoticiasController < InheritedResources::Base
   def resultado_de_busqueda
     @noticias = Noticia.busqueda(params[:busqueda])
   end
+  def destroy
+    destroy!{ root_path }
+  end
+
 end

@@ -139,6 +139,7 @@ ActiveRecord::Schema.define(:version => 20140117022112) do
     t.string   "x"
     t.string   "y"
     t.string   "leyenda"
+    t.integer  "noticia_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

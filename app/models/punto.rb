@@ -1,5 +1,5 @@
 class Punto < ActiveRecord::Base
-  attr_accessible :leyenda, :x, :y
+  attr_accessible :leyenda, :x, :y, :noticia_id
 
-  belongs_to :chart
+  belongs_to :noticia
 end

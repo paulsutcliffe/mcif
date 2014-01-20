@@ -4,6 +4,7 @@ class CreatePuntos < ActiveRecord::Migration
       t.string :x
       t.string :y
       t.string :leyenda
+      t.integer :noticia_id
 
       t.timestamps
     end
