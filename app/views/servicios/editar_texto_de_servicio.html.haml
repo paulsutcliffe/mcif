@@ -7,6 +7,10 @@
       %ul
         - @texto_de_servicio.errors.full_messages.each do |msg|
           %li= msg
+  .form-group
+    .col-sm-10
+      %h1.editar
+        Editar Servicio
 
   .form-group
     = f.label :subtitulo, class: 'col-sm-2 control-label'
@@ -16,5 +20,5 @@
     = f.label :contenido, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_area :contenido, class: 'tinymce'
-  .actions
-    = f.submit 'Guardar', class: 'btn btn-default'
+      .actions
+        = f.submit 'Guardar', class: 'btn btn-default'

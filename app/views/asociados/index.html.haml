@@ -14,15 +14,12 @@
             = link_to image_tag(asociado.imagen_url(:medium), class: 'img-responsive'), asociado.link
             %p
               = asociado.descripcion
-
-          - if current_admin
-            - unless @asociados.first.position == asociado.position
-              = link_to(asociados_move_path(method: 'move_higher', asociado_id: asociado.id)) do
-                %i.glyphicon.glyphicon-arrow-left.btn-lg
-            - unless asociado.position == @asociados.last.position
-              = link_to(asociados_move_path(method: 'move_lower', asociado_id: asociado.id)) do
-                %i.glyphicon.glyphicon-arrow-right.btn-lg
-
-
-            = link_to 'Editar', edit_asociado_path(asociado), class: 'btn btn-success'
-            = link_to 'Eliminar', asociado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+            - if current_admin
+              - unless @asociados.first.position == asociado.position
+                = link_to(asociados_move_path(method: 'move_higher', asociado_id: asociado.id)) do
+                  %i.glyphicon.glyphicon-arrow-up.btn-lg
+              - unless asociado.position == @asociados.last.position
+                = link_to(asociados_move_path(method: 'move_lower', asociado_id: asociado.id)) do
+                  %i.glyphicon.glyphicon-arrow-down.btn-lg
+              = link_to 'Editar', edit_asociado_path(asociado), class: 'btn btn-success'
+              = link_to 'Eliminar', asociado, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

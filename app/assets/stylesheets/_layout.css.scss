@@ -393,17 +393,77 @@ CONTACTO new
   }
 }
 
+.editar_datos_de_contacto{
+  form{
+    margin-top: 30px;
+  }
+  .form-group{
+  max-width:100%;
+  }
+}
+
+
+.actions{
+  margin-top: 10px;
+}
+
+.editar_texto_de_servicio{
+  #content{
+    margin-top: 30px;
+  }
+}
+
+
+#edit_texto_de_servicio_1{
+  .form-group{
+    max-width: 100%;
+  }
+}
+
+.editar{
+margin-left: 130px;
+margin-bottom: 30px;
+}
+#region-servicios{
+  .btn-success{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+#region-servicios-list{
+  .active-list{
+    img{
+      margin-top: 10px;
+    }
+    .btn-danger{
+      margin-top: 5px;
+    }
+  }
+
+}
+
+#region-servicios{
+  .region:last-child{
+    margin-top: 10px;
+  }
+}
 
 #contactos {
   .title.subtitle {margin-bottom: 30px}
   form {
-    input[type="submit"] {@extend .default-button; float: right}
+    input[type="submit"] {
+    @extend .default-button;
+    }
   }
 }
 
 // Asociados
-#region-asociados.container{
-
+.btn-warning{
+  margin-top:20px;
+}
+.btn-info{
+  margin-top:20px;
 }
 
 
@@ -419,6 +479,7 @@ CONTACTO new
         .img-responsive{
           margin:0 auto;
         }
+      
     }
   }
 }
