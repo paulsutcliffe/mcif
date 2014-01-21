@@ -37,7 +37,7 @@
     .region-inner.region-title
       %h2.title.subtitle= I18n.t 'contactenos.trabaja'
       %p
-        = @datos_de_contacto.trabaja_con_nosotros
+        = raw(@datos_de_contacto.trabaja_con_nosotros)
 
     .region-inner.region-title
       %h2.title.subtitle= I18n.t 'contactenos.envia'

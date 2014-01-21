@@ -15,7 +15,7 @@
     .col-sm-10
       = f.text_field :puesto, class: 'form-control'
   .form-group
-    = f.label :profesión, class: 'col-sm-2 control-label'
+    = f.label :profesion, 'Profesión', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_field :profesion, class: 'form-control'
   .form-group
@@ -27,7 +27,7 @@
     .col-sm-10
       = f.select :tipo, Miembro::TIPOS.collect {|i| [i]}, class: 'form-control'
   .form-group
-    = f.label :fotografía, class: 'col-sm-2 control-label'
+    = f.label :fotografia, 'Fotografía', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.file_field :fotografia, class: 'form-control'
   .form-group

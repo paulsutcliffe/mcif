@@ -13,7 +13,7 @@
           .region-asociados
             = link_to image_tag(asociado.imagen_url(:medium), class: 'img-responsive'), asociado.link
             %p
-              = asociado.descripcion
+              = raw(asociado.descripcion)
             - if current_admin
               - unless @asociados.first.position == asociado.position
                 = link_to(asociados_move_path(method: 'move_higher', asociado_id: asociado.id)) do

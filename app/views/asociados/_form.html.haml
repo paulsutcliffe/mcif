@@ -15,8 +15,8 @@
     .col-sm-10
       = f.text_field :link, class: 'form-control'
   .form-group
-    = f.label :descripcion, class: 'col-sm-2 control-label'
+    = f.label :descripcion, 'Descripción', class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_field :descripcion, class: 'form-control'
+      = f.text_area :descripcion, class: 'tinymce'
   .actions
     = f.submit 'Guardar', class: 'btn btn-default'

@@ -7,11 +7,11 @@
           %li= msg
 
   .form-group
-    = f.label :titulo, class: 'col-sm-2 control-label'
+    = f.label :titulo, 'Título', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_field :titulo, class: 'form-control'
   .form-group
-    = f.label :subtitulo, class: 'col-sm-2 control-label'
+    = f.label :subtitulo, 'Subtítulo', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.text_field :subtitulo, class: 'form-control'
   .form-group
@@ -35,11 +35,11 @@
     .col-sm-10
       = f.date_select :fecha, class: 'form-control'
   .form-group
-    = f.label :categoria, class: 'col-sm-2 control-label'
+    = f.label :categoria, 'Categoría', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.select :categoria, Noticia::CATEGORIAS.collect { |i| [i]}, class: 'form-control'
   .form-group
-    = f.label :subcategoria, class: 'col-sm-2 control-label'
+    = f.label :subcategoria, 'Subcategoría', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.select :subcategoria, Noticia::SUBCATEGORIAS.collect { |i| [i]}, class: 'form-control'
   .form-group
