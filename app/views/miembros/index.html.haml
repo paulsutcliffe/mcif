@@ -6,13 +6,13 @@
     .region-title
       %h2.title= page_title!(@historia.titulo)
       %span.subtitle= @historia.subtitulo
-    .region-inner
+    .region-inner.historia
 
-      %p.historia
+      %p
         = raw(@historia.contenido)
-      %a#toggle.glyphicon.glyphicon-chevron-down
-        %span
-          Ver m&aacute;s
+  %a#toggle.glyphicon.glyphicon-chevron-down
+    %span
+      Ver m&aacute;s
   .region
     - if current_admin
       = link_to 'Editar historia', miembros_editar_historia_path, class: 'btn btn-success'
