@@ -3,5 +3,7 @@ class Asociado < ActiveRecord::Base
 
   mount_uploader :imagen, ImagenUploader
 
+  translates :descripcion
+
   acts_as_list
 end

@@ -6,6 +6,8 @@ class Noticia < ActiveRecord::Base
 
   friendly_id :titulo, use: :slugged
 
+  translates :contenido, :subtitulo, :comentario
+
   has_many :puntos
   has_many :videos
   has_many :imagenes

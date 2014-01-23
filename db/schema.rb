@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140117022112) do
+ActiveRecord::Schema.define(:version => 20140123200525) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(:version => 20140117022112) do
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
   add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
+
+  create_table "asociado_translations", :force => true do |t|
+    t.integer  "asociado_id"
+    t.string   "locale",      :null => false
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.text     "descripcion"
+  end
+
+  add_index "asociado_translations", ["asociado_id"], :name => "index_asociado_translations_on_asociado_id"
+  add_index "asociado_translations", ["locale"], :name => "index_asociado_translations_on_locale"
 
   create_table "asociados", :force => true do |t|
     t.string   "imagen"
@@ -63,6 +74,17 @@ ActiveRecord::Schema.define(:version => 20140117022112) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "datos_de_contacto_translations", :force => true do |t|
+    t.integer  "datos_de_contacto_id"
+    t.string   "locale",               :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.text     "trabaja_con_nosotros"
+  end
+
+  add_index "datos_de_contacto_translations", ["datos_de_contacto_id"], :name => "index_datos_de_contacto_translations_on_datos_de_contacto_id"
+  add_index "datos_de_contacto_translations", ["locale"], :name => "index_datos_de_contacto_translations_on_locale"
+
   create_table "datos_de_contactos", :force => true do |t|
     t.string   "telefono"
     t.string   "direccion"
@@ -79,12 +101,39 @@ ActiveRecord::Schema.define(:version => 20140117022112) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "historium_translations", :force => true do |t|
+    t.integer  "historium_id"
+    t.string   "locale",       :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.text     "contenido"
+    t.string   "subtitulo"
+    t.string   "titulo"
+  end
+
+  add_index "historium_translations", ["historium_id"], :name => "index_historium_translations_on_historium_id"
+  add_index "historium_translations", ["locale"], :name => "index_historium_translations_on_locale"
+
   create_table "imagenes", :force => true do |t|
     t.string   "imagen"
     t.integer  "noticia_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "miembro_translations", :force => true do |t|
+    t.integer  "miembro_id"
+    t.string   "locale",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "contenido"
+    t.string   "puesto"
+    t.string   "profesion"
+    t.text     "resumen"
+  end
+
+  add_index "miembro_translations", ["locale"], :name => "index_miembro_translations_on_locale"
+  add_index "miembro_translations", ["miembro_id"], :name => "index_miembro_translations_on_miembro_id"
 
   create_table "miembros", :force => true do |t|
     t.string   "nombre"
@@ -100,6 +149,19 @@ ActiveRecord::Schema.define(:version => 20140117022112) do
     t.string   "profesion"
     t.text     "resumen"
   end
+
+  create_table "noticia_translations", :force => true do |t|
+    t.integer  "noticia_id"
+    t.string   "locale",     :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+    t.text     "contenido"
+    t.string   "subtitulo"
+    t.text     "comentario"
+  end
+
+  add_index "noticia_translations", ["locale"], :name => "index_noticia_translations_on_locale"
+  add_index "noticia_translations", ["noticia_id"], :name => "index_noticia_translations_on_noticia_id"
 
   create_table "noticias", :force => true do |t|
     t.string   "titulo"
@@ -170,6 +232,18 @@ ActiveRecord::Schema.define(:version => 20140117022112) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "texto_de_servicio_translations", :force => true do |t|
+    t.integer  "texto_de_servicio_id"
+    t.string   "locale",               :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.text     "contenido"
+    t.string   "subtitulo"
+  end
+
+  add_index "texto_de_servicio_translations", ["locale"], :name => "index_texto_de_servicio_translations_on_locale"
+  add_index "texto_de_servicio_translations", ["texto_de_servicio_id"], :name => "index_texto_de_servicio_translations_on_texto_de_servicio_id"
 
   create_table "texto_de_servicios", :force => true do |t|
     t.text     "contenido"
