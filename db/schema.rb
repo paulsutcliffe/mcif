@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140123200525) do
+ActiveRecord::Schema.define(:version => 20140124201001) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -148,7 +148,12 @@ ActiveRecord::Schema.define(:version => 20140123200525) do
     t.datetime "updated_at", :null => false
     t.string   "profesion"
     t.text     "resumen"
+    t.string   "slug_en"
+    t.string   "slug_es"
   end
+
+  add_index "miembros", ["slug_en"], :name => "index_miembros_on_slug_en"
+  add_index "miembros", ["slug_es"], :name => "index_miembros_on_slug_es"
 
   create_table "noticia_translations", :force => true do |t|
     t.integer  "noticia_id"
@@ -177,7 +182,12 @@ ActiveRecord::Schema.define(:version => 20140123200525) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.text     "comentario"
+    t.string   "slug_en"
+    t.string   "slug_es"
   end
+
+  add_index "noticias", ["slug_en"], :name => "index_noticias_on_slug_en"
+  add_index "noticias", ["slug_es"], :name => "index_noticias_on_slug_es"
 
   create_table "postulantes", :force => true do |t|
     t.string   "nombre"
@@ -229,6 +239,23 @@ ActiveRecord::Schema.define(:version => 20140123200525) do
   create_table "slides", :force => true do |t|
     t.string   "imagen"
     t.string   "link"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "texto_de_inicio_translations", :force => true do |t|
+    t.integer  "texto_de_inicio_id"
+    t.string   "locale",             :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+    t.text     "contenido"
+  end
+
+  add_index "texto_de_inicio_translations", ["locale"], :name => "index_texto_de_inicio_translations_on_locale"
+  add_index "texto_de_inicio_translations", ["texto_de_inicio_id"], :name => "index_texto_de_inicio_translations_on_texto_de_inicio_id"
+
+  create_table "texto_de_inicios", :force => true do |t|
+    t.text     "contenido"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

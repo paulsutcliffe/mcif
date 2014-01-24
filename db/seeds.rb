@@ -68,5 +68,7 @@ A inicio del año 2008, MC&F adopta la forma legal que hoy ostenta, a efectos de
 
 TextoDeServicio.create(subtitulo: 'subtítulo', contenido: 'Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.')
 
+TextoDeInicio.create(contenido: 'Somos profesionales con experiencia en sistemas financieros y de gestión empresarial. Nos focalizamos en los mercados financieros. Brindamos asesoría en análisis económico, financiero y regulación.')
+
 
 

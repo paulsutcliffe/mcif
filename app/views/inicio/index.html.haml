@@ -9,7 +9,9 @@
     .region-inner
       %i.icon.person_chart
       %p
-        = I18n.t 'inicio.resumen'
+        = raw(@texto_de_inicio.contenido)
+      - if current_admin
+        = link_to 'Editar Texto', inicio_editar_texto_de_inicio_path, class: 'btn btn-success'
 
 #servicios-region
   .container

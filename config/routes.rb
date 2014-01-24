@@ -48,6 +48,10 @@ Mcif::Application.routes.draw do
 
     resources :slides
 
+    get 'inicio/editar_texto_de_inicio'
+
+    put 'inicio/update_texto_de_inicio'
+
     root to: 'inicio#index'
 
   end
