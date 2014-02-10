@@ -4,7 +4,7 @@ es:
   menu:
     inicio: Inicio
     nosotros: Nosotros
-    asociados: Asociados
+    asociados: Aliados
     servicios: Servicios
     noticias: Noticias
     noticias_mcif: Noticias MCIF
@@ -27,7 +27,7 @@ es:
     directorio: Directorio
     expertos: Expertos
   asociados:
-    asociados: Asociados
+    asociados: Aliados
 
   servicios:
     servicios: Servicios
