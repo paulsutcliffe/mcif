@@ -29,12 +29,11 @@ HOME
 ================================== */
 #presentacion {
   .region-inner {
-    @extend .col-lg-6;
-    @extend .col-md-12;
-    @extend .col-sm-12;
-    @extend .col-xs-12;
-
-    @extend .col-lg-offset-3;
+    @extend .col-lg-4;
+    @extend .col-md-4;
+    @extend .col-sm-4;
+    @extend .col-xs-4;
+   /* @extend .col-lg-offset-3;
    /* @extend .col-md-offset-1;
     @extend .col-sm-offset-1;
     @extend .col-xs-offset-1;*/

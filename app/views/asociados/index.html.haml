@@ -11,7 +11,8 @@
       .region-inner
         - @asociados.each do |asociado|
           .region-asociados
-            = link_to image_tag(asociado.imagen_url(:medium), class: 'img-responsive'), asociado.link
+            .region.color
+              = link_to image_tag(asociado.imagen_url(:medium), class: 'img-responsive'), asociado.link
             %p
               = raw(asociado.descripcion)
             - if current_admin

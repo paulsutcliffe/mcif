@@ -206,7 +206,16 @@ i.icon {
   * {color: white}
 }
 
-
+#presentacion{
+.icon{
+float:none;
+display:inline-block;
+margin: none;
+}
+.r_icon{
+text-align: center;
+}
+}
 .social-links {
   #main-header & {
     li {@include inline-block}
@@ -320,3 +329,13 @@ overflow: hidden;
   }
 }
 
+.row, .region, #region-asociados-list .region-inner {
+    margin-left: 0px;
+      margin-right: 0px;
+    }
+#region-asociados-list{background-color: #9E8A2F; margin-bottom: 80px;
+.region-inner{padding-left: 0px; margin: 0px;}
+}
+.region-asociados p{color:white;}
+.region-asociados {padding-left:0px !important; margin: 40px 0px 0px 0px;}
+.region.color{background-color:white;} 

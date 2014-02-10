@@ -6,13 +6,25 @@
   .region
     .region-title
       %h2.title  MC&F - Mercados de Capitales, Inversiones y Finanzas Consultores S.A.
-    .region-inner
+    .region.r_icon
       %i.icon.person_chart
-      %p
-        = raw(@texto_de_inicio.contenido)
-      - if current_admin
-        = link_to 'Editar Texto', inicio_editar_texto_de_inicio_path, class: 'btn btn-success'
-
+    .clear    
+    .region
+      .region-inner
+        %p
+          = raw(@texto_de_inicio.contenido)
+        - if current_admin
+          = link_to 'Editar Texto', inicio_editar_texto_de_inicio_path, class: 'btn btn-success'
+      .region-inner
+        %p
+          = raw(@texto_de_inicio.contenido)
+        - if current_admin
+          = link_to 'Editar Texto', inicio_editar_texto_de_inicio_path, class: 'btn btn-success'
+      .region-inner
+        %p
+          = raw(@texto_de_inicio.contenido)
+        - if current_admin
+          = link_to 'Editar Texto', inicio_editar_texto_de_inicio_path, class: 'btn btn-success'
 #servicios-region
   .container
     .region
