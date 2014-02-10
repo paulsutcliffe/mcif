@@ -6,7 +6,9 @@
         = I18n.t 'noticias.subtitulo'
       = admin_create('Nueva Noticia', new_noticia_path)
       %p
-        = I18n.t 'noticias.parrafo'
+        = raw(@texto_de_noticia.contenido)
+      - if current_admin
+        = link_to 'Editar texto de Noticia', noticias_editar_texto_de_noticia_path, class: 'btn btn-success'
     .region-inner
 
 

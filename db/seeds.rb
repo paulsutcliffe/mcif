@@ -70,5 +70,7 @@ TextoDeServicio.create(subtitulo: 'subtítulo', contenido: 'Far far away, behind
 
 TextoDeInicio.create(contenido: 'Somos profesionales con experiencia en sistemas financieros y de gestión empresarial. Nos focalizamos en los mercados financieros. Brindamos asesoría en análisis económico, financiero y regulación.')
 
+TextoDeNoticia.create(contenido: 'Somos profesionales con experiencia en sistemas financieros y de gestión empresarial.')
+
 
 

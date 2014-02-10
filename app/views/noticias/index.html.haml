@@ -6,7 +6,9 @@
         = I18n.t 'noticias.subtitulo'
 
       %p
-        = I18n.t 'noticias.parrafo'
+        = @texto_de_noticia.contenido
+      - if current_admin
+        = link_to 'Editar texto de Noticia', noticias_editar_texto_de_noticia_path, class: 'btn btn-success'
 
     .region-inner
 
