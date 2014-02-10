@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140124201001) do
+ActiveRecord::Schema.define(:version => 20140210174656) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -184,6 +184,7 @@ ActiveRecord::Schema.define(:version => 20140124201001) do
     t.text     "comentario"
     t.string   "slug_en"
     t.string   "slug_es"
+    t.string   "boletin"
   end
 
   add_index "noticias", ["slug_en"], :name => "index_noticias_on_slug_en"

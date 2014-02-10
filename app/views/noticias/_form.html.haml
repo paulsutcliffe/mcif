@@ -47,6 +47,10 @@
     .checkbox-inline
       = f.check_box :destacado
   .form-group
+    = f.label :boletin, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.file_field :boletin
+  .form-group
     = f.label 'Imágenes', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.fields_for :imagenes do |imagen_form|
@@ -60,7 +64,7 @@
         = video_form.text_field :link, class: 'form-control pull-left'
         = video_form.link_to_remove "Eliminar video", class: 'btn btn-danger'
       = f.link_to_add "Agregar video", :videos, class: 'btn btn-primary'
-  .form-group
+  -# .form-group
     = f.label 'Charts', class: 'col-sm-2 control-label'
     .col-sm-10
       = f.fields_for :puntos do |punto_form|

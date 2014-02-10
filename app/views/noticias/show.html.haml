@@ -9,6 +9,10 @@
         %i
           = @noticia.subtitulo
 
+    - if @noticia.boletin
+      .region-download
+        = link_to 'Descargar PDF', @noticia.boletin_url, download: @noticia.boletin, class: 'btn btn-success'
+
     .region-inner
       = raw(@noticia.comentario)
       %br

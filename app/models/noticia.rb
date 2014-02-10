@@ -1,12 +1,14 @@
 #coding: utf-8
 class Noticia < ActiveRecord::Base
-  attr_accessible :categoria, :contenido, :destacado, :fecha, :link, :subtitulo, :tipo, :titulo, :subcategoria, :imagenes_attributes, :videos_attributes, :puntos_attributes, :comentario
+  attr_accessible :boletin, :categoria, :contenido, :destacado, :fecha, :link, :subtitulo, :tipo, :titulo, :subcategoria, :imagenes_attributes, :videos_attributes, :puntos_attributes, :comentario
 
   extend FriendlyId
 
   friendly_id :titulo, use: :slugged
 
   translates :contenido, :subtitulo, :comentario
+
+  mount_uploader :boletin, PdfUploader
 
   has_many :puntos
   has_many :videos
