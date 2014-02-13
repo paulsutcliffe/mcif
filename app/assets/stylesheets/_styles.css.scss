@@ -169,6 +169,8 @@ $icons-sprite-dimensions: true;
 i.icon {
   display: block; margin-right: 10px; float: left;
   &.person_chart {@include icons-sprite(person_chart)}
+  &.computer_chart {@include icons-sprite(computer_chart)}
+  &.person_brain {@include icons-sprite(person_brain)}
   &.e_mail_marketing {@include icons-sprite(e_mail_marketing)}
   &.facebook {@include icons-sprite(facebook)}
   &.facebook_2 {@include icons-sprite(facebook_2)}
@@ -339,3 +341,5 @@ overflow: hidden;
 .region-asociados p{color:white;}
 .region-asociados {padding-left:0px !important; margin: 40px 0px 0px 0px;}
 .region.color{background-color:white;} 
+
+.ico{text-align: center;}

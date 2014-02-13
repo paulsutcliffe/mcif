@@ -4,17 +4,21 @@
   .region
     .region-title
       %h2.title= page_title!('MC&F - Mercados de Capitales, Inversiones y Finanzas Consultores S.A.')
-    .region.r_icon
-      %i.icon.person_chart
     .clear
     .region
       .region-inner
+        .ico
+          %i.icon.computer_chart
         %p
           = raw(@texto_de_inicio.contenido)
       .region-inner
+        .ico
+          %i.icon.person_chart
         %p
           = raw(@texto_de_inicio.contenido2)
       .region-inner
+        .ico
+          %i.icon.person_brain
         %p
           = raw(@texto_de_inicio.contenido3)
       - if current_admin
