@@ -1,5 +1,7 @@
 Mcif::Application.routes.draw do
 
+  get "sitemap/index"
+
   scope '(:locale)', :locale => /es|en/ do
 
     get '/asociados/move', to: 'asociados#move'

@@ -1,0 +1,27 @@
+#region-Sitemap.container
+  .region
+    .region-title
+      %h1= page_title!(I18n.t 'sitemap')
+
+  .region
+    %h2= link_to (I18n.t 'menu.inicio'), root_path
+  .region
+    %h2= link_to (I18n.t 'menu.nosotros'), miembros_path
+    - @miembros.each do |miembro|
+      %h3= link_to miembro.nombre, miembro
+  .region
+    %h2= link_to (I18n.t 'menu.asociados'), asociados_path
+  .region
+    %h2= I18n.t 'menu.servicios'
+    - @servicios.each do |servicio|
+      %h3= link_to servicio.nombre, servicios_path(servicio_id: servicio)
+  .region
+    %h2= link_to (I18n.t 'menu.noticias_mcif'), noticias_mcif_path
+  .region
+    %h2= link_to (I18n.t 'menu.noticias_recomendadas'), noticias_recomendadas_path
+  .region
+    %h2= link_to (I18n.t 'menu.publicaciones_mcif'), publicaciones_mcif_path
+  .region
+    %h2= link_to (I18n.t 'menu.publicaciones_recomendadas'), publicaciones_recomendadas_path
+  .region
+    %h2= link_to (I18n.t 'menu.contactenos'), new_contacto_path

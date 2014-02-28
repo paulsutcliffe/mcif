@@ -1,6 +1,7 @@
 es:
   app:
     name: MC&F
+  sitemap: Mapa de Sitio
   menu:
     inicio: Inicio
     nosotros: Nosotros
