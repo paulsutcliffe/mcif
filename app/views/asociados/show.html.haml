@@ -1,21 +1,20 @@
 #region-asociados.container
   .region
     .region-title
-      %h1= page_title!('asociado')
+      %h2.title= page_title!('asociado')
 
-  .region
-    %p
-      %b Imagen:
-      = @asociado.imagen
-    %p
-      %b Link:
-      = @asociado.link
-    %p
-      %b Descripcion:
-      = @asociado.descripcion
-
-  .region
-    - if current_admin
-      .admin-controls
-        = link_to 'Editar', edit_asociado_path(@asociado), class: 'btn btn-success'
-    = link_to 'Regresar', asociados_path, class: 'btn btn-warning'
+#region-asociados-list
+  .container
+    .region
+      .region-inner
+        .region-asociados
+          .region.color
+            = link_to image_tag(@asociado.imagen_url(:medium), class: 'img-responsive'), @asociado.link
+          %p
+            = @asociado.descripcion
+  
+    .region
+      - if current_admin
+        .admin-controls
+          = link_to 'Editar', edit_asociado_path(@asociado), class: 'btn btn-success'
+      = link_to 'Regresar', asociados_path, class: 'btn btn-warning'
