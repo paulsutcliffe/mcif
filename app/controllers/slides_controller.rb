@@ -8,6 +8,6 @@ class SlidesController < InheritedResources::Base
     update! { root_path }
   end
   def destroy
-    destroy! { root_path}
+    destroy! { root_path }
   end
 end

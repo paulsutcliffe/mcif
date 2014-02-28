@@ -4,6 +4,7 @@ require 'faker'
 FactoryGirl.define do
   factory :slide do
     imagen { Rack::Test::UploadedFile.new(File.join(Rails.root,'spec','support','slide.jpg'))}
-    link{ Faker::Internet.url }
+    link { Faker::Internet.url }
+    video { 'http://vimeo.com/78058789' }
   end
 end

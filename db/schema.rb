@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140228175152) do
+ActiveRecord::Schema.define(:version => 20140228192657) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -246,6 +246,7 @@ ActiveRecord::Schema.define(:version => 20140228175152) do
     t.string   "link"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.string   "video"
   end
 
   create_table "texto_de_inicio_translations", :force => true do |t|

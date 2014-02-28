@@ -36,7 +36,7 @@ end
   FactoryGirl.create :servicio
 end
 
-12.times do
+6.times do
   FactoryGirl.create :slide
 end
 
