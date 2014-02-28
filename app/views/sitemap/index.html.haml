@@ -12,17 +12,27 @@
       %span.subtitle= link_to miembro.nombre, miembro
   .region
     %h2.title= link_to (I18n.t 'menu.asociados'), asociados_path
+    - @asociados.each do |asociado|
+      %span.subtitle= link_to asociado.nombre, asociado
   .region
     %h2.title= I18n.t 'menu.servicios'
     - @servicios.each do |servicio|
       %span.subtitle= link_to servicio.nombre, servicios_path(servicio_id: servicio)
   .region
     %h2.title= link_to (I18n.t 'menu.noticias_mcif'), noticias_mcif_path
+    - @noticias_mcif.each do |noticia_mcif|
+      %span.subtitle= link_to noticia_mcif.titulo, noticia_mcif
   .region
     %h2.title= link_to (I18n.t 'menu.noticias_recomendadas'), noticias_recomendadas_path
+    - @noticias_recomendadas.each do |noticia_recomendada|
+      %span.subtitle= link_to noticia_recomendada.titulo, noticia_recomendada
   .region
     %h2.title= link_to (I18n.t 'menu.publicaciones_mcif'), publicaciones_mcif_path
+    - @publicaciones_mcif.each do |publicacion_mcif|
+      %span.subtitle= link_to publicacion_mcif.titulo, publicacion_mcif
   .region
     %h2.title= link_to (I18n.t 'menu.publicaciones_recomendadas'), publicaciones_recomendadas_path
+    - @publicaciones_recomendadas.each do |publicacion_recomendada|
+      %span.subtitle= link_to publicacion_recomendada.titulo, publicacion_recomendada
   .region
     %h2.title= link_to (I18n.t 'menu.contactenos'), new_contacto_path
