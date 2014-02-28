@@ -25,7 +25,7 @@
       = admin_create('Nuevo Miembro', new_miembro_path)
 
     %figure.region-inner
-      = image_tag 'img-nosotros-index.jpg', class: 'img-full'
+      = image_tag @historia.foto_url(:thumb), class: 'img-full'
 
 #region-miembros-directorio
   .container
