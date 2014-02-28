@@ -349,5 +349,28 @@ overflow: hidden;
 .carousel-indicators .active{background-color:  #72E642 !important;}
 .carousel-caption{padding-bottom: 0px !important ;}
 
-
+#sitemap{
+a{text-decoration: none;}
+span{margin-left: 30px;}
+.subtitle{
+  a{
+    color: #AEAEAE;
+  }
+    display: block;
+            font-size: 20px;
+                font-weight: 300;
+                    line-height: 100%;
+                        margin-bottom: 8px;
+                            text-transform: uppercase;
+}
+}
+h2{margin-left: 30px;}
+.title{
+  a{color: black;}
+    font-weight: bold;
+        line-height: 100%;
+            margin-bottom: 8px;
+                margin-top: 47px;
+                    text-transform: uppercase;
+}
 .ico{text-align: center;}
