@@ -15,6 +15,8 @@
       - if index == 0
         .item.active
           = image_tag slide.imagen_url(:full)
+          .carousel-caption
+            = render 'video'
           - if current_admin
             = link_to 'Editar', edit_slide_path(slide), class: 'btn btn-success'
             = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
@@ -26,7 +28,9 @@
           - if current_admin
             = link_to 'Editar', edit_slide_path(slide), class: 'btn btn-success'
             = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-
+    
+    = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-left'), '#carousel-generic', :'data-slide' => 'prev', class: 'left carousel-control'
+    = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-right'), '#carousel-generic', :'data-slide' => 'next', class: 'right carousel-control'
   -#
     = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-slide' => 'prev'
     = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-slide' => 'next'
