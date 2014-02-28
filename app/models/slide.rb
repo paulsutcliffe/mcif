@@ -7,4 +7,5 @@ class Slide < ActiveRecord::Base
     youtube(width: 569, height: 320)
     vimeo(width: 569, height: 320)
   end
+  acts_as_list
 end

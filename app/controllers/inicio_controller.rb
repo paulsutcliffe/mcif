@@ -1,6 +1,6 @@
 class InicioController < ApplicationController
   def index
-    @slides = Slide.all
+    @slides = Slide.order("position")
     @servicios = Servicio.all
     @clientes = Cliente.random
     @texto_de_inicio = TextoDeInicio.first

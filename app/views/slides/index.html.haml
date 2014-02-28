@@ -24,5 +24,12 @@
               %td= slide.link
               %td= slide.video_html
               - if current_admin
+                %td
+                  - unless @slides.first.position == slide.position
+                    = link_to(slides_move_path(method: 'move_higher', slide_id: slide.id)) do
+                      %i.glyphicon.glyphicon-arrow-up.btn-lg
+                  - unless slide.position == @slides.last.position
+                    = link_to(slides_move_path(method: 'move_lower', slide_id: slide.id)) do
+                      %i.glyphicon.glyphicon-arrow-down.btn-lg
                 %td= link_to 'Editar', edit_slide_path(slide), class: 'btn btn-success'
                 %td= link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
