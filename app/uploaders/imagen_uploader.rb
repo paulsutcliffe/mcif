@@ -38,7 +38,6 @@ class ImagenUploader < CarrierWave::Uploader::Base
 
   version :medium do
     process resize_and_pad: [300, 300, "#ffffff", "Center"]
-    process :resize_to_fill => [300, 300]
   end
 
   version :regular do

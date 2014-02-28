@@ -7,6 +7,10 @@
           %li= msg
 
   .form-group
+    = f.label :nombre, class: 'col-sm-2 control-label'
+    .col-sm-10
+      = f.text_field :nombre, class: 'form-control'
+  .form-group
     = f.label :imagen, class: 'col-sm-2 control-label'
     .col-sm-10
       = f.file_field :imagen, class: 'form-control'

@@ -12,7 +12,7 @@
     = raw(@servicio.contenido)
   %br
   #proyecto
-    = image_tag image_path 'logo_mcif.png'
+    = image_tag @servicio.fotografia_url(:medium)
   %br
   .social-share
     %b.pull-left

@@ -1,6 +1,7 @@
 class Servicio < ActiveRecord::Base
-  attr_accessible :contenido, :icono, :nombre
+  attr_accessible :contenido, :icono, :nombre, :fotografia
   mount_uploader :icono, IconoUploader
+  mount_uploader :fotografia, ImagenUploader
 
   translates :nombre, :contenido
 
