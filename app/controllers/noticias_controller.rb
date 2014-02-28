@@ -3,7 +3,7 @@ class NoticiasController < InheritedResources::Base
 
   def noticias
     @texto_de_noticia = TextoDeNoticia.first
-    @noticias = params[:tipo] ? Noticia.noticia.clase(params[:subcategoria]).where("tipo = ?", params[:tipo]) : Noticia.noticia.clase(params[:subcategoria]).where("tipo = ?", Noticia::TIPOS.first)
+    @noticias = params[:tipo] ? Noticia.noticia.clase(params[:subcategoria]) : Noticia.noticia.clase(params[:subcategoria])
     @destacados = Noticia.noticia.clase(params[:subcategoria]).destacados.limit(4)
 
     respond_to do |format|
@@ -15,7 +15,7 @@ class NoticiasController < InheritedResources::Base
 
   def publicaciones
     @texto_de_noticia = TextoDeNoticia.first
-    @noticias = params[:tipo] ? Noticia.publicacion.clase(params[:subcategoria]).where("tipo = ?", params[:tipo]) : Noticia.publicacion.clase(params[:subcategoria]).where("tipo = ?", Noticia::TIPOS.first)
+    @noticias = params[:tipo] ? Noticia.publicacion.clase(params[:subcategoria]) : Noticia.publicacion.clase(params[:subcategoria])
     @destacados = Noticia.publicacion.clase(params[:subcategoria]).destacados.limit(4)
 
     respond_to do |format|

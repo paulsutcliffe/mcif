@@ -15,17 +15,17 @@
       Ver m&aacute;s
   .region
     - if current_admin
-      = link_to 'Editar historia', miembros_editar_historia_path, class: 'btn btn-success'
+      = link_to 'Editar historia y foto', miembros_editar_historia_path, class: 'btn btn-success'
   .region
     .region-title
       %h2.title= page_title!(I18n.t 'nosotros.nosotros')
       %span.subtitle= I18n.t 'nosotros.miembros'
 
-    .region-inner
-      = admin_create('Nuevo Miembro', new_miembro_path)
-
     %figure.region-inner
       = image_tag @historia.foto_url(:thumb), class: 'img-full'
+
+    .region-inner
+      = admin_create('Nuevo Miembro', new_miembro_path)
 
 #region-miembros-directorio
   .container

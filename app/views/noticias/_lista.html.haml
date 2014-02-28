@@ -24,10 +24,5 @@
 #carousel-noticias-list.carousel.slide.container
   .region
     .region-title
-      %ol.carousel-indicators
-        - Noticia::TIPOS.each do |tipo|
-          %li
-            %h2.title= link_to tipo, "/#{params[:action]}-#{params[:subcategoria].pluralize(2).downcase}?tipo=#{tipo}", remote: true
-
       #grid-noticias
         = render @noticias
