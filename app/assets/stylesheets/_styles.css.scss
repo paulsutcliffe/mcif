@@ -61,7 +61,7 @@
   }
   #logo a {float: none; margin: 0 auto; display: block; text-align: center}
   .navbar-default .navbar-collapse .navbar-nav {margin-top: 0}
-  
+
   .navbar-default .navbar-nav > li > a{
   height: 50px;
   }
@@ -69,7 +69,7 @@
 
 @media (min-width: 1280px) {
   .navbar-default .navbar-collapse .navbar-nav > li > a,
-  .navbar-default .navbar-collapse .navbar-nav > li > span {padding: 10px 25px}
+  .navbar-default .navbar-collapse .navbar-nav > li > span {padding: 10px 24px}
 }
 
 /*.backLava  {top: 100% !important; width: 100%; height: 4px !important; content: ""; background: $green}*/
@@ -174,7 +174,7 @@ i.icon {
   &.e_mail_marketing {@include icons-sprite(e_mail_marketing)}
   &.facebook {@include icons-sprite(facebook)}
   &.facebook_2 {@include icons-sprite(facebook_2)}
-  &.facebook_3 {@include icons-sprite(facebook_3)} 
+  &.facebook_3 {@include icons-sprite(facebook_3)}
   &.youtube {@include icons-sprite(youtube)}
   &.linkedin {@include icons-sprite(linkedin)}
   &.linkedin_2 {@include icons-sprite(linkedin_2)}
@@ -184,7 +184,7 @@ i.icon {
   &.telephone {@include icons-sprite(telephone)}
   &.destination {@include icons-sprite(destination)}
   &.search_big {@include icons-sprite(search_big)}
-  
+
 }
 
 #main-header {
@@ -289,7 +289,7 @@ margin: 5px 20px 0px 0px;
 
 #region-miembros #toggle{
 cursor:pointer !important;
-text-decoration: none; 
+text-decoration: none;
 span{
     font-family: 'Lato';
   }
@@ -340,6 +340,6 @@ overflow: hidden;
 }
 .region-asociados p{color:white;}
 .region-asociados {padding-left:0px !important; margin: 40px 0px 0px 0px;}
-.region.color{background-color:white;} 
+.region.color{background-color:white;}
 
 .ico{text-align: center;}
