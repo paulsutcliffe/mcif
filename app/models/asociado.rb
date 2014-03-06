@@ -5,9 +5,9 @@ class Asociado < ActiveRecord::Base
 
   translates :descripcion
 
-  #default_scope order('nombre ASC')
+  default_scope order('nombre ASC')
 
-  #friendly_id :nombre, use: :slugged
+  friendly_id :nombre, use: :slugged
 
   acts_as_list
 end
