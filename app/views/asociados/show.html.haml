@@ -11,8 +11,8 @@
           .region.color
             = link_to image_tag(@asociado.imagen_url(:medium), class: 'img-responsive'), @asociado.link
           %p
-            = @asociado.descripcion
-  
+            = raw(@asociado.descripcion)
+
     .region
       - if current_admin
         .admin-controls
