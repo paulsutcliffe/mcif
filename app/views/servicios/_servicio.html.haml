@@ -11,7 +11,7 @@
   %p
     = raw(@servicio.contenido)
   %br
-  - unless @servicio.fotogragia.empty?
+  - unless @servicio.fotografia.empty?
     #proyecto
       = image_tag @servicio.fotografia_url(:medium)
   %br
