@@ -264,7 +264,7 @@ text-align: center;
   .region-inner {
     .velo-wrapper {
       position: relative; overflow: hidden; min-height: 255px;
-      .velo {@include absolute(left, top, 0, 0); @include size(100%, 100%); background: rgba(255,255,255,0.4);}
+      .velo {@include absolute(left, top, 0, 0); @include size(100%, 100%);}
       .icon {@include absolute(left, bottom, 50%, 100% ); margin-left: -34px}
       a { padding: 20px 10px 0; @include absolute(top, left, 0, 0); @include size(100%, 100%); display: block }
       a {color: black}
@@ -335,7 +335,7 @@ overflow: hidden;
     margin-left: 0px;
       margin-right: 0px;
     }
-#region-asociados-list{background-color: #9E8A2F; margin-bottom: 80px;
+#region-asociados-list{background-color: $sand; margin-bottom: 80px;
 .region-inner{padding-left: 0px; margin: 0px;}
 }
 .region-asociados p{color:white;}
@@ -381,3 +381,33 @@ h2{margin-left: 30px;}
                    padding-bottom: 20px;
 }
 .ico{text-align: center;}
+
+
+ // .velo{
+ // background: #939393; /* Old browsers */
+ // background: -moz-linear-gradient(top,  #939393 0%, #ffffff 86%); /* FF3.6+ */
+ // background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#939393), color-stop(86%,#ffffff)); /* Chrome,Safari4+ */
+ // background: -webkit-linear-gradient(top,  #939393 0%,#ffffff 86%); /* Chrome10+,Safari5.1+ */
+ // background: -o-linear-gradient(top,  #939393 0%,#ffffff 86%); /* Opera 11.10+ */
+ // background: -ms-linear-gradient(top,  #939393 0%,#ffffff 86%); /* IE10+ */
+ // background: linear-gradient(to bottom,  #939393 0%,#ffffff 86%); /* W3C */
+ // filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#939393', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+ // }
+
+.velo-wrapper{
+background: rgba(118, 114, 112, 0.6);
+}
+
+.velo-wrapper:hover {
+  background-color: rgba(0, 255, 56, 0.5);
+  cursor: pointer;
+  -webkit-transition: background-color 2s ease-out;
+  -moz-transition: background-color 2s ease-out;
+  -o-transition: background-color 2s ease-out;
+  transition: background-color 2s ease-out;
+}
+
+  
+.subtitle{
+color: $green;
+}
