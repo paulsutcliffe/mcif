@@ -1,0 +1,25 @@
+= render 'layouts/html'
+
+%body{id: bodyid, class: bodyclass}
+  %header#main-header
+    .container
+      .region
+        .region-inner
+          %h1#logo
+            = link_to image_tag('logo.png', title: 'MCIF', alt: 'MCIF'), root_path, class: 'navbar-brand'
+          = render 'shared/social_share'
+          =# render 'layouts/nav_advanced'
+
+  #content
+    = yield
+
+  %footer#main-footer
+    .container
+      #footer-bottom.region
+        .region-inner
+          = render('layouts/menu_footer')
+          %p Mercados de Capitales, Inversiones y Finanzas Consultores S.A. Todos los Derechos Reservados 2013.
+
+
+
+

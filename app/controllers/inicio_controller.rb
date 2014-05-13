@@ -1,4 +1,11 @@
 class InicioController < ApplicationController
+
+  layout 'mantenimiento', only: :matenimiento
+
+  def mantenimiento
+    render layout: "mantenimiento"
+  end
+
   def index
     @slides = Slide.order("position")
     @servicios = Servicio.all
