@@ -22,9 +22,6 @@
           = image_tag slide.imagen_url(:full)
           .carousel-caption
             = slide.video_html
-    
-    = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-left'), '#carousel-generic', :'data-slide' => 'prev', class: 'left carousel-control'
-    = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-right'), '#carousel-generic', :'data-slide' => 'next', class: 'right carousel-control'
-  -#
-    = link_to content_tag(:span, '', class: 'icon-prev'), '#carousel-generic', :'data-slide' => 'prev'
-    = link_to content_tag(:span, '', class: 'icon-next'), '#carousel-generic', :'data-slide' => 'next'
+
+  = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-left'), '#carousel-generic', :'data-slide' => 'prev', class: 'left carousel-control'
+  = link_to content_tag(:span, '', class: 'glyphicon glyphicon-chevron-right'), '#carousel-generic', :'data-slide' => 'next', class: 'right carousel-control'

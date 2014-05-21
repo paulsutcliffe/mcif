@@ -60,7 +60,7 @@ Mcif::Application.routes.draw do
 
     put 'inicio/update_texto_de_inicio'
 
-    root to: 'inicio#mantenimiento'
+    root to: 'inicio#index'
 
   end
 
