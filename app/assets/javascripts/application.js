@@ -17,4 +17,4 @@
 //= require scripts.js
 //= require highcharts.js
 // require tinymce
-// require contactos.js.coffee
+//= require contactos.js.coffee
