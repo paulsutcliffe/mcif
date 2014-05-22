@@ -16,5 +16,5 @@
 //= require jquery.li-scroller.1.0.js
 //= require scripts.js
 //= require highcharts.js
-// require tinymce
+//= require tinymce
 //= require contactos.js.coffee
