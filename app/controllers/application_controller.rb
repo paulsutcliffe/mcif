@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def cargar_ticker_noticias
-    @ticker_noticias = Noticia.all(:fecha => 'created_at DESC', :limit => 6)
+    @ticker_noticias = Noticia.all(:order=> 'fecha DESC', :limit => 6)
   end
 
 
