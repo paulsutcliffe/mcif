@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def cargar_ticker_noticias
-    @ticker_noticias = Noticia.order(fecha: :desc).limit(5)
+    @ticker_noticias = Noticia.order(fecha: :asc).limit(5)
   end
 
 
