@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140228214105) do
+ActiveRecord::Schema.define(:version => 20140528053548) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",                  :default => "", :null => false
@@ -258,6 +258,8 @@ ActiveRecord::Schema.define(:version => 20140228214105) do
     t.datetime "created_at",         :null => false
     t.datetime "updated_at",         :null => false
     t.text     "contenido"
+    t.text     "contenido2"
+    t.text     "contenido3"
   end
 
   add_index "texto_de_inicio_translations", ["locale"], :name => "index_texto_de_inicio_translations_on_locale"

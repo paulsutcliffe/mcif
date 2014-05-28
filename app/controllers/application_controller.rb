@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def cargar_ticker_noticias
-    @ticker_noticias = Noticia.order(fecha: :asc).where("destacado = ?", true)
+    @ticker_noticias = Noticia.order(fecha: :desc).where("destacado = ?", true)
   end
 
 
